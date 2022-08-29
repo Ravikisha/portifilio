@@ -1,0 +1,137 @@
+/* ======== imports ================= */
+@import './variables/useable';
+@import './variables/variables';
+@import './components_styles/header';
+@import './components_styles/home';
+@import './components_styles/map';
+// @import './components_styles/parallex';
+@import './components_styles/headingabout';
+@import './components_styles/character';
+@import './components_styles/strength';
+@import './components_styles/hobbies';
+@import './components_styles/qualification';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+// a {
+//   color: inherit;
+//   text-decoration: none;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }
+@import './variables/variables.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $body-color;
+  color: $text-color;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
+}
+
+
+body,button,input,textarea{
+  font-family: $body-font;
+  font-size: $normal-font-size;
+}
+
+h1, h2, h3, h4 {
+  color: $title-color;
+  font-weight: $font-semi-bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 992px) {
+  .container_mod{
+    margin-left: $mb-1-5;
+    margin-right: $mb-1-5;
+  }
+  .button_mod{
+    padding: 1rem 1.75rem;
+  }
+  .button__icon{
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.map{
+  margin: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 0 4rem;
+  }
+  .map{
+    margin: .8rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container_mod{
+    margin-left: $mb-1;
+    margin-right: $mb-1;
+  }
+  .map{
+    margin: 0.3rem;
+  }
+}
+
+.about__page{
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
