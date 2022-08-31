@@ -346,10 +346,47 @@ $bold: 600;
 	.text{
 		font-size: 1.2rem;
 	}
-	.socials{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-		row-gap: 2px;
-	}	
+	// .socials{
+	// 	display: grid;
+	// 	grid-template-columns: 1fr 1fr;
+	// 	gap: 1rem;
+	// 	row-gap: 2px;
+	// }	
+}
+
+@media screen and (max-width: 991px){
+  .socials{
+    align-items: center;
+    justify-content: center;
+    .btn__social {
+      width: 60px;
+      height: 60px;
+      margin: 0;
+      border-radius: 30%;
+    }
+    
+    .btn__social i {
+      line-height: 50px;
+      font-size: 28px;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 390px){
+  .socials{
+    .btn__social {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      border-radius: 30%;
+    }
+    
+    .btn__social i {
+      line-height: 40px;
+      font-size: 23px;
+      transition: 0.3s ease-in-out;
+    }
+    
+  }
 }

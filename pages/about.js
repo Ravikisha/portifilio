@@ -7,7 +7,8 @@ import MyselfAbout from '../components/myselfAbout'
 import Strength from '../components/strength'
 import SuperHero from '../components/superhero'
 import Qualification from './../components/Qualification';
-
+import WorkAs from '../components/workas'
+import Year5 from '../components/year5'
 
 const About = () => {
   return (
@@ -20,6 +21,8 @@ const About = () => {
     {/* <SuperHero /> */}
     <Hobbies />
     <Qualification />
+    <WorkAs />
+    <Year5 />
     </div>
     </>
   )

@@ -2,6 +2,7 @@ import "../styles/globals.scss";
 import Head from "next/head";
 import Script from "next/script";
 import Header from "../components/Header";
+import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -24,8 +25,10 @@ function MyApp({ Component, pageProps }) {
         id="box-icons"
         src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"
       />
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></Script>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
