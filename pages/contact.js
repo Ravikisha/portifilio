@@ -1,21 +1,16 @@
-import { createRoot } from 'react-dom/client'
-import { Suspense } from 'react'
-import { Loader } from '@react-three/drei'
-import {Awsome} from '../components/awsome'
-
-
-import React from 'react'
+import Earth from './../components/earth';
+import Water from './../components/water';
+import ContactForm from './../components/contactForm';
 
 const Contact = () => {
-  return (
-    <>
-
-     <Suspense fallback={null}>
-       <Awsome />
-     </Suspense>
-  <Loader />
-    </>
-  )
+    return(
+        <>
+        <div className="earth__container">
+            <Earth />
+            <Water />
+            <ContactForm />
+            </div>
+        </>
+    )
 }
-
 export default Contact

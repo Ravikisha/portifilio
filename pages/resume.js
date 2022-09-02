@@ -23,20 +23,7 @@ const Resume = () => {
       })
     }
   }
-  // function generateResume() {
-  //   var data = document.getElementById('resume');
-  //   html2canvas(data, { useCORS:true}) // useCORS is optional if your images are externally hosted somewhere like s3
-  //   .then(canvas => {
-  //     const contentDataURL = canvas.toDataURL('image/png')
-  //     let pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
-  //     var pdfWidth = pdf.internal.pageSize.getWidth();
-  //     var pdfHeight = pdf.internal.pageSize.getHeight();
-  //     pdf.addImage(contentDataURL, 'PNG',  pdfWidth, pdfHeight);
-  //     //  pdf.save('new-file.pdf');
-  //     window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
-  //   });
- 
-  // }
+
 
   return (
     <>
@@ -461,3 +448,18 @@ const Resume = () => {
 };
 
 export default Resume;
+
+  // function generateResume() {
+  //   var data = document.getElementById('resume');
+  //   html2canvas(data, { useCORS:true}) // useCORS is optional if your images are externally hosted somewhere like s3
+  //   .then(canvas => {
+  //     const contentDataURL = canvas.toDataURL('image/png')
+  //     let pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
+  //     var pdfWidth = pdf.internal.pageSize.getWidth();
+  //     var pdfHeight = pdf.internal.pageSize.getHeight();
+  //     pdf.addImage(contentDataURL, 'PNG',  pdfWidth, pdfHeight);
+  //     //  pdf.save('new-file.pdf');
+  //     window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
+  //   });
+ 
+  // }
