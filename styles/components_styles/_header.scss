@@ -78,8 +78,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $z-fixed;
+  z-index: 10000;
   background-color: $body-color;
+
   // backdrop-filter: blur(10px);
   // -webkit-backdrop-filter: blur(10px);
   // box-shadow: 8px 25px 22px 5px rgba(0,0,0,0.1);

@@ -45,15 +45,27 @@
     &__container {
 
       h2{
-       font-size: 60px;
+       font-size: 30px;
        letter-spacing: 19px;
        line-height: 35px;
+       span{
+        font-size: 26px;
+        letter-spacing: 6px;
+      }
      }
    
-      h2 span{
-       font-size: 26px;
-     }
     }
   }
 }
 }
+
+// @media screen and (max-width: 4500px){
+//   .parallax{
+//     &__container{
+//       h2 {span{
+//         font-size: 20px;
+//       }
+//     }
+//     }
+//   }
+// }

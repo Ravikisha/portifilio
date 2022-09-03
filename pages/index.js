@@ -5,9 +5,14 @@ import Map from "../components/Map";
 import Light from '../components/light';
 import ThreeDPage from "../components/threed_page";
 import WorkerSection from './../components/workerSection';
+import Head from 'next/head';
 const Home = () => {
   return (
     <>
+    <Head>
+        <title>Ravi Kishan</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <section className="main">
         <HomePage />
       </section>

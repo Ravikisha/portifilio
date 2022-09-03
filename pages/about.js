@@ -10,10 +10,16 @@ import Qualification from './../components/Qualification';
 import WorkAs from '../components/workas'
 import Year5 from '../components/year5'
 import Bubbles from '../components/bubbles'
+import Head from 'next/head'
 
 const About = () => {
   return (
     <>
+    <Head>
+        <title>About Page</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+    
     <div className="about__page">
     <HeadingAbout />
     <Character />

@@ -2,6 +2,7 @@ import React from "react";
 import jsPDF from "jspdf";
 import Myphoto from "../assets/about.jpg";
 import html2canvas from 'html2canvas';
+import Head from 'next/head';
 
 const Resume = () => {
   const [darkTheme, setDarkTheme] = React.useState(false);
@@ -27,6 +28,10 @@ const Resume = () => {
 
   return (
     <>
+    <Head>
+        <title>My Resume</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
         <div
           className={` ${
             darkTheme ? "dark-theme main__div " : "light-theme main__div"
