@@ -2,6 +2,7 @@ import React,{useEffect,useRef}from 'react'
 import {motion} from 'framer-motion';
 // import Tilt from 'react-vanilla-tilt';
 import VanillaTilt from 'vanilla-tilt';
+import Image from 'next/image'
 
 
 function Tilt(props) {
@@ -50,9 +51,11 @@ const Card = ({PL}) => {
       exit={{opacity:0,scale:0}}
       layout className="card__box">
             <h2 className="card__name">{PL.name}</h2>
-            <a href="#" className="card__buy">Buy Now</a>
+            <a href={PL.codelink} className="card__buy" target="_blank">Read More</a>
             <div className="card__circle"></div>
-            <img src={PL.imageUrl} alt="image" className="card__product" />
+            <div className="card__product">
+                <Image width="300" height="150" objectFit="contain" src={PL.imageUrl} alt="image"  />
+            </div>
       </motion.div>
       </Tilt>
     </>

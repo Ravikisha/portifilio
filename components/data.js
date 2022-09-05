@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 
 const Data = () => {
   return (
@@ -60,7 +61,8 @@ const Data = () => {
         <p className="home__description">
             I&apos;m a full stack developer with a passion for creating beautiful and functional websites and applications.
         </p>
-        <a href="#contact" className="button button--flex button_mod">
+        <Link href="/contact">
+          <div  className="button button--flex button_mod">
             Hire Me <svg
                   className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +80,8 @@ const Data = () => {
                     fill="#fff"
                   ></path>
                 </svg>
-        </a>
+                </div>
+        </Link>
       </div>
     </>
   );

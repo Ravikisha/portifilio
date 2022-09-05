@@ -1,18 +1,29 @@
 import React from 'react'
 import Man from '../assets/man.png'
 import Curve from '../assets/curve.png'
+import Image from 'next/image';
+import Link from 'next/link';
 const WorkerSection = () => {
   return (
     <>
     <section className="worker">
-        <img src={Curve.src} alt="waves" className="curve__wave" />
+      <div className="curve__wave">
+        <Image src={Curve.src} alt="waves" width={500} height={500} objectFit="cover"/>
+        </div>
         <div className="worker__contentBx">
-            <h2>Coming Soon</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquid optio hic fugit repudiandae quam nihil reiciendis laborum sed, quibusdam eius? Tempore iste laboriosam veniam!</p>
-            <a href="#">Go to Resume</a>
+            <h2>Work With Me</h2>
+            <p>I am currently working on full stack development and machine learning technologies. I am great on working in team and community. You have choice to select me that am i able to serve your esteemed company.</p>
+            <Link  href="/resume">
+              <div className="gotoresume">
+              Go to Resume
+            <i className="uil uil-arrow-right"></i>
+              </div>
+              </Link>
         </div>
         <div className="worker__imgBx">
-            <img src={Man.src} alt="img__man" />
+          <div className="img__man">
+            <Image src={Man.src} alt="img__man" width={500} height={500} objectFit='cover' />
+          </div>
         </div>
     </section>
     </>

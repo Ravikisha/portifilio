@@ -1,33 +1,37 @@
 import React from "react";
+import Link from 'next/link';
 
 const Social = () => {
   return (
     <>
       <div className="home__social">
+        <Link href="https://www.instagram.com/ravikishan.69/" passHref={true}>
         <a
-          href="https:://www.instagram.com/ravikishan.69"
           target="_blank"
-          rel="noreferrer"
+          // rel="noopener noreferrer"
           className="home__social-icon"
-        >
+          >
           <i className="uil uil-instagram"></i>
         </a>
-        <a
-          href="https:://www.github.com/ravikisha"
+          </Link>
+          < Link href="https://github.com/ravikisha"><a
+          
           target="_blank"
-          rel="noreferrer"
+          // rel="noopener noreferrer"
           className="home__social-icon"
         >
           <i className="uil uil-github-alt"></i>
         </a>
+        </Link>
+        <Link href="https://www.linkedin.com/in/ravi-kishan-62ab51221/" >
         <a
-          href="https:://www.linkedin.com/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="home__social-icon"
         >
           <i className="uil uil-linkedin"></i>
         </a>
+        </Link>
       </div>
     </>
   );

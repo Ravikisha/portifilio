@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 const Hobbies = () => {
   return (
@@ -10,9 +11,12 @@ const Hobbies = () => {
         <div className="hobbies__page__container w-full">
           <div className="hobbies__page__card rounded-xl">
             <div className="hobbies__page__card__img">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80"
                 alt="book"
+                layout="fill"
+                objectFit="cover"
+
               />
             </div>
             <div className="hobbies__page__card__contentBox">
@@ -28,9 +32,11 @@ const Hobbies = () => {
           </div>
           <div className="hobbies__page__card rounded-xl">
             <div className="hobbies__page__card__img">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
                 alt="book"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="hobbies__page__card__contentBox">
@@ -44,9 +50,11 @@ const Hobbies = () => {
           </div>
           <div className="hobbies__page__card rounded-xl">
             <div className="hobbies__page__card__img">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1618519764140-d3cdc6496de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                 alt="book"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="hobbies__page__card__contentBox">
@@ -60,9 +68,11 @@ const Hobbies = () => {
           </div>
           <div className="hobbies__page__card rounded-xl">
             <div className="hobbies__page__card__img">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1624825602528-2ac658281cd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                 alt="book"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="hobbies__page__card__contentBox">
@@ -76,9 +86,11 @@ const Hobbies = () => {
           </div>
           <div className="hobbies__page__card rounded-xl">
             <div className="hobbies__page__card__img">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1560831340-b9679dc9e9f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                 alt="book"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="hobbies__page__card__contentBox">
@@ -92,9 +104,11 @@ const Hobbies = () => {
           </div>
           <div className="hobbies__page__card rounded-xl">
             <div className="hobbies__page__card__img">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                 alt="book"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
             <div className="hobbies__page__card__contentBox">

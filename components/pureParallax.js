@@ -37,7 +37,7 @@ const PureParallax = () => {
           <h2 className="object" data-value="3" style={{transform: imgMoved(3)}}>
             SKILLS
             <br />
-            <span>CERTIFICATIONS</span>
+            <span></span>
           </h2>
           <img src={Img1.src} className="object" data-value="-2" style={{transform: imgMoved(-2)}} alt="" />
           <img src={Img2.src} className="object" data-value="6" style={{transform: imgMoved(6)}} alt="" />

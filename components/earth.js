@@ -1,10 +1,11 @@
 import React from 'react'
-import EarthImage from '../assets/earth.jpg';
 const Earth = () => {
   return (
     <>
     <section className="earth">
-        <img src={EarthImage.src} alt="earth" className="earthImage" />
+      {/* <div className="earthImage">
+        <Image src={EarthImage} layout={'fill'} objectFit='contain' alt="earth" />
+      </div> */}
         <div className="water__content">
                     <h2 className="water__text">Contact</h2>
                     <h2 className="water__text">Contact</h2>

@@ -16,6 +16,7 @@
     "@splinetool/loader": "^0.9.73",
     "@splinetool/r3f-spline": "^1.0.1",
     "@splinetool/react-spline": "^2.2.1",
+    "@tanem/react-nprogress": "^5.0.12",
     "boxicons": "^2.1.2",
     "framer-motion": "^7.2.1",
     "html2canvas": "^1.4.1",
@@ -29,7 +30,8 @@
     "sass": "^1.54.5",
     "styled-components": "^5.3.5",
     "three": "^0.142.0",
-    "vanilla-tilt": "^1.7.2"
+    "vanilla-tilt": "^1.7.2",
+    "zustand": "^4.1.1"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",

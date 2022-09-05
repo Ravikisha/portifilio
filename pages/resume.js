@@ -3,6 +3,7 @@ import jsPDF from "jspdf";
 import Myphoto from "../assets/about.jpg";
 import html2canvas from 'html2canvas';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Resume = () => {
   const [darkTheme, setDarkTheme] = React.useState(false);
@@ -45,11 +46,16 @@ const Resume = () => {
                   <section className="resume__home" id="home">
                     <div className="resume__home__container section bd-grid">
                       <div className="resume__home__data bd-grid">
-                        <img
+                        <div className="resume__home__img">
+                        <Image
                           src={Myphoto.src}
                           alt="MyImage"
-                          className="resume__home__img"
+                          width={500}
+                          height={500}
+                          objectFit="cover"
+                          className="rounded-full"
                         />
+                        </div>
 
                         <h1 className="resume__home__title">
                           Ravi <b>Kishan</b>
@@ -113,7 +119,7 @@ const Resume = () => {
                         className="resume__social__link"
                       >
                         <i className="uil uil-linkedin resume__social__icon"></i>{" "}
-                        @Ravikishan
+                        ravi-kishan-62ab51221
                       </a>
                       <a
                         href=""
@@ -121,15 +127,15 @@ const Resume = () => {
                         className="resume__social__link"
                       >
                         <i className="uil uil-instagram resume__social__icon"></i>{" "}
-                        @Ravikishan
+                        @ravikishan.69
                       </a>
                       <a
                         href=""
                         target="_blank"
                         className="resume__social__link"
                       >
-                        <i className="uil uil-facebook resume__social__icon"></i>{" "}
-                        @Ravikishan
+                        <i className="uil uil-github resume__social__icon"></i>{" "}
+                        ravikisha
                       </a>
                     </div>
                   </section>
@@ -163,13 +169,13 @@ const Resume = () => {
                         <div className="resume__education__data bd-grid">
                           <h3 className="resume__education__title">
                             {" "}
-                            Master of Programming{" "}
+                            Bachelor of Computer Application{" "}
                           </h3>
                           <span className="resume__education__studies">
-                            University of Sheild
+                            Prestige Institute of Management & Research
                           </span>
                           <span className="resume__education__year">
-                            2010 - 2015
+                            2021 - Present
                           </span>
                         </div>
                       </div>
@@ -181,13 +187,13 @@ const Resume = () => {
                         <div className="resume__education__data bd-grid">
                           <h3 className="resume__education__title">
                             {" "}
-                            Bachlor of Programming{" "}
+                            Intermediate (Math) {" "}
                           </h3>
                           <span className="resume__education__studies">
-                            University of Sheild
+                            BSEB, Patna
                           </span>
                           <span className="resume__education__year">
-                            2007 - 2010
+                            2019-2021
                           </span>
                         </div>
                       </div>
@@ -199,52 +205,61 @@ const Resume = () => {
                         <div className="resume__education__data bd-grid">
                           <h3 className="resume__education__title">
                             {" "}
-                            Basic of Programming{" "}
+                            Matriculation{" "}
                           </h3>
                           <span className="resume__education__studies">
-                            University of Sheild
+                            BSEB, Patna
                           </span>
                           <span className="resume__education__year">
-                            2005 - 20007
+                            2018 - 2019
                           </span>
                         </div>
                       </div>
                     </div>
                   </section>
-                  <div className="resume__skills resume__section" id="skills">
-                    <h2 className="resume__section__title">Skills</h2>
+                  <section className="resume__languages resume__section">
+                    <h2 className="resume__section__title">Languages</h2>
 
-                    <div className="resume__skills__content bd-grid">
-                      <ul className="resume__skills__data">
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>Python
+                    <div className="resume__languages__container">
+                      <ul className="resume__languages__content bd-grid">
+                        <li className="resume__languages__name">
+                          <span className="resume__languages__circle"></span>{" "}
+                          English
                         </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>
-                          Javascript
+                        <li className="resume__languages__name">
+                          <span className="resume__languages__circle"></span>{" "}
+                          Hindi
                         </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>DBMS
+                        <li className="resume__languages__name">
+                          <span className="resume__languages__circle"></span>{" "}
+                          Mathili
                         </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>C++
-                        </li>
-                      </ul>
-
-                      <ul className="resume__skills__data">
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>React
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>scss
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>
-                          Firebase
+                        <li className="resume__languages__name">
+                          <span className="resume__languages__circle"></span>{" "}
+                          Bhojpuri
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </section>
+                  <section className="resume__interests resume__section">
+                    <h2 className="resume__section__title">Interests</h2>
+
+                    <div className="resume__interests__container bd-grid">
+                      <div className="resume__interests__content">
+                        <i className="uil uil-subway"></i>
+                        <span className="resume__interests__name">Traveling</span>
+                      </div>
+                      <div className="resume__interests__content">
+                        <i className="uil uil-ticket"></i>
+                        <span className="resume__interests__name">Watching Movies</span>
+                      </div>
+                      <div className="resume__interests__content">
+                        <i className="uil uil-book-reader"></i>
+                        <span className="resume__interests__name">Reading</span>
+                      </div>
+                    </div>
+                  </section>
+                  
                 </div>
                 <div className="resume__right">
                   <section
@@ -402,44 +417,40 @@ const Resume = () => {
                       </div>
                     </div>
                   </section>
-                  <section className="resume__languages resume__section">
-                    <h2 className="resume__section__title">Languages</h2>
+                  <div className="resume__skills resume__section" id="skills">
+                    <h2 className="resume__section__title">Skills</h2>
 
-                    <div className="resume__languages__container">
-                      <ul className="resume__languages__content bd-grid">
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          English
+                    <div className="resume__skills__content bd-grid">
+                      <ul className="resume__skills__data">
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>Python
                         </li>
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          Hindi
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>
+                          Javascript
                         </li>
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          Mathili
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>DBMS
+                        </li>
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>Java
+                        </li>
+                      </ul>
+
+                      <ul className="resume__skills__data">
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>React
+                        </li>
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>scss
+                        </li>
+                        <li className="resume__skills__name">
+                          <span className="resume__skills__circle"></span>
+                          Firebase
                         </li>
                       </ul>
                     </div>
-                  </section>
-                  <section className="resume__interests resume__section">
-                    <h2 className="resume__section__title">Interests</h2>
-
-                    <div className="resume__interests__container bd-grid">
-                      <div className="resume__interests__content">
-                        <i className="uil uil-music"></i>
-                        <span className="resume__interests__name">Music</span>
-                      </div>
-                      <div className="resume__interests__content">
-                        <i className="uil uil-music"></i>
-                        <span className="resume__interests__name">Music</span>
-                      </div>
-                      <div className="resume__interests__content">
-                        <i className="uil uil-music"></i>
-                        <span className="resume__interests__name">Music</span>
-                      </div>
-                    </div>
-                  </section>
+                  </div>
                 </div>
               </div>
             </main>

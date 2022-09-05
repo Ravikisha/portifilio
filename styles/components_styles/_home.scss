@@ -132,6 +132,7 @@
 }
 
 .button_mod {
+  cursor: pointer;
   transition: 0.3s;
   &:hover {
     .button__icon {

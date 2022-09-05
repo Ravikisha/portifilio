@@ -1,5 +1,6 @@
 import Spline from "@splinetool/react-spline";
 import styled from "styled-components";
+import Link from 'next/link';
 
 export default function ThreeDPage() {
   return (
@@ -13,36 +14,14 @@ export default function ThreeDPage() {
           <div />
         </Social>
         <Content>
-          {/* <Menu>
-          <li>
-            <img src={Logo} alt="title" />
-          </li>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/">Download</a>
-          </li>
-          <li>
-            <a href="/">App</a>
-          </li>
-          <li>
-            <a href="/">Login</a>
-          </li>
-          <li>
-            <button>Get Started</button>
-          </li>
-        </Menu> */}
-          <h1>Collaborate with people</h1>
+          <h1>I Build That You Always Love</h1>
           <p>
-            Bring your team together and build your community by using our
-            cross-platform app that lets you collaborate via chat, voice and by
-            sharing and storing unlimited media files. A world of topics is
-            waiting for you. Join the private beta.
+          I make websites that serve a purpose and bring value to your users. I also love building accessible, inclusive products. I make building easy and interesting.
           </p>
-          <button>
-            <i className="uil uil-right-arrow"></i> Download for Mac
-          </button>
+          <Link href="/projects" >
+            <div className="gotoproject ml-2 md:ml-10">
+            Go to Projects<i className="uil uil-arrow-right"></i> </div>
+          </Link>
         </Content>
       </Wrapper>
     </MainBody>
@@ -138,7 +117,7 @@ const Content = styled.div`
     font-family: 'Poppins', sans-serif;
   }
 
-  button {
+  .gotoproject {
     background: rgba(0, 0, 0, 0.2);
     border: 0px;
     font-size: 16px;

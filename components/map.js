@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 const Map = () => {
   return (
@@ -7,42 +8,55 @@ const Map = () => {
         <div className="container__mod2">
           <div className="hero">
             <div className="hero-img">
-              <img
+              <Image
                 src="https://bit.ly/3wufimz"
                 alt="illustration-mockups"
                 className="mockup"
+                width={600}
+                height={500}
+                objectFit="contain"
+
               />
             </div>
 
             <div className="hero-text">
-              <h1 className="head">I Build That You Always Love.</h1>
+              <h1 className="head">Languages I can&apos;t speak, Dev & Design Tools that I particularly enjoy</h1>
 
               <div className="text">
-                I make websites that serve a purpose and bring value to your
-                users. I also love building accessible, inclusive products.
-                I&apos;m a full-stack developer based in Gwalior, India.
+                There are so many technologies out there, and I&apos;m always looking to learn more. I&apos;ve been working with these for a while now, and I&apos;m always looking to learn more.
               </div>
 
-              <button className="btn text">Register</button>
+              <Link href="/skills" >
+                <div className="btn text">Go to Skills <i className="uil uil-arrow-right"></i></div></Link>
             </div>
           </div>
 
           <div className="socials">
-            <a href="#" className="btn__social in">
+            <Link href="https://www.linkedin.com/in/ravi-kishan-62ab51221/">
+            <a className="btn__social in" target="_blank">
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="#" className="btn__social tw">
+            </Link>
+            <Link href="https://twitter.com/">
+            <a className="btn__social tw" target="_blank">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="btn__social gh">
+            </Link>
+            <Link href="https://github.com/ravikisha/" >
+            <a  className="btn__social gh" target="_blank">
               <i className="fab fa-github"></i>
             </a>
-            <a href="#" className="btn__social ig">
+            </Link>
+            <Link href="https://www.instagram.com/ravikishan.69/">
+            <a className="btn__social ig" target="_blank">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="btn__social wh">
+            </Link>
+            <Link href="https://wa.me/7061133910" >
+            <a  className="btn__social wh" target="_blank">
               <i className="fab fa-whatsapp"></i>
             </a>
+            </Link>
           </div>
         </div>
       </div>

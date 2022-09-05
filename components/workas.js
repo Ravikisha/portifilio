@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import About1 from '../assets/about01.png';
 import About2 from '../assets/about02.png';
@@ -9,62 +10,64 @@ const WorkAs = () => {
   return (
     <>
     <h2 className="p-10 text-5xl font-bold text-center text-black bg-[#f5f5f5]">
-          I am <span className="text-purple-500">a</span>
+          I can <span className="text-purple-500">be a</span>
     </h2>
     <div className="workas">
       <div className="workas__container">
         <div className="workas__card">
           <div className="workas__imgBox">
-            <img src={About1.src} alt="workas" className="workas__img" />
+            <div className="workas__img">
+            <Image src={About1} alt="workas" layout={'fill'} objectFit='cover' />
+            </div>
           </div>
           <div className="workas__content">
             <div>
-              <h2>Food One</h2>
+              <h2>Frontend Developer</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem.
+                I am too good at designing interactive and responsive layouts.
               </p>
             </div>
           </div>
         </div>
         <div className="workas__card">
           <div className="workas__imgBox">
-            <img src={About2.src} alt="workas" className="workas__img" />
+            <Image layout={'fill'} objectFit='cover' src={About2} alt="workas" className="workas__img" />
           </div>
           <div className="workas__content">
             <div>
-              <h2>Food Two</h2>
+              <h2>Backend Developer</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem.
+                I love to design complex api, backend servers and databases in many technologies.
               </p>
             </div>
           </div>
         </div>
         <div className="workas__card">
           <div className="workas__imgBox">
-            <img src={About3.src} alt="workas" className="workas__img" />
+          <div className="workas__img">
+            <Image src={About3} alt="workas" layout={'fill'} objectFit='cover' />
+            </div>
           </div>
           <div className="workas__content">
             <div>
-              <h2>Food Three</h2>
+              <h2>App Developer</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem.
+                I can develop applications for multiple devices and platforms. In this my frontend and backend skills helps me a lot.
               </p>
             </div>
           </div>
         </div>
         <div className="workas__card">
           <div className="workas__imgBox">
-            <img src={About4.src} alt="workas" className="workas__img" />
+          <div className="workas__img">
+            <Image src={About4} alt="workas" layout={'fill'} objectFit='cover' />
+            </div>
           </div>
           <div className="workas__content">
             <div>
-              <h2>Food Four</h2>
+              <h2>ML Engineer</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quidem.
+                Currently, I am learning machine learning and deep learning. I am also working on some projects in this field. 
               </p>
             </div>
           </div>

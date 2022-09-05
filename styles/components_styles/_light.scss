@@ -42,7 +42,7 @@
         font-size: 80px;
         font-weight: 400;
       }
-      a {
+      .gotolink {
         text-decoration: none;
         background: rgb(0, 149, 255);
         padding: 14px 40px;
@@ -51,6 +51,8 @@
         font-size: 18px;
         margin-top: 30px;
         border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
       }
 
       &__label {

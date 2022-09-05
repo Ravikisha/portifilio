@@ -1,6 +1,6 @@
 import React,{useState,useRef,useEffect} from "react";
 
-const year5 = () => {
+const Year5 = () => {
   // const main_img = useRef(null);
   // const sec = useRef(null);
   // useEffect(()=>{
@@ -50,4 +50,4 @@ const year5 = () => {
   );
 };
 
-export default year5;
+export default Year5;
