@@ -1,9 +1,9 @@
-import React,{useEffect,useRef}from 'react'
-import {motion} from 'framer-motion';
+import React, { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 // import Tilt from 'react-vanilla-tilt';
-import VanillaTilt from 'vanilla-tilt';
-import Image from 'next/image'
-
+import VanillaTilt from "vanilla-tilt";
+import Image from "next/image";
+import Link from "next/link";
 
 function Tilt(props) {
   const { options, ...rest } = props;
@@ -16,7 +16,7 @@ function Tilt(props) {
   return <div ref={tilt} {...rest} />;
 }
 
-const Card = ({PL}) => {
+const Card = ({ PL }) => {
   /* 
   {
     reverse:           false,  // reverse the tilt direction
@@ -39,27 +39,39 @@ const Card = ({PL}) => {
     max: 30,
     // glare: true,
     // "max-glare": 0.3,
-    // "glare-prerender": false 
+    // "glare-prerender": false
   };
   return (
     <>
-    <Tilt options={options}>
-      <motion.div
-      animate={{opacity:1, scale: 1}}
-      initial={{opacity:0, scale: 0}}
-      transition={{duration:0.3}}
-      exit={{opacity:0,scale:0}}
-      layout className="card__box">
-            <h2 className="card__name">{PL.name}</h2>
-            <a href={PL.codelink} className="card__buy" target="_blank">Read More</a>
-            <div className="card__circle"></div>
-            <div className="card__product">
-                <Image width="300" height="150" objectFit="contain" src={PL.imageUrl} alt="image"  />
-            </div>
-      </motion.div>
+      <Tilt options={options}>
+        <motion.div
+          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          transition={{ duration: 0.3 }}
+          exit={{ opacity: 0, scale: 0 }}
+          layout
+          className="card__box"
+        >
+          <h2 className="card__name">{PL.name}</h2>
+          <Link href={PL.codelink}>
+            <a className="card__buy" target="_blank">
+              Read More
+            </a>
+          </Link>
+          <div className="card__circle"></div>
+          <div className="card__product">
+            <Image
+              width="300"
+              height="150"
+              objectFit="contain"
+              src={PL.imageUrl}
+              alt="image"
+            />
+          </div>
+        </motion.div>
       </Tilt>
     </>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

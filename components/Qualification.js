@@ -8,7 +8,7 @@ const Qualification = () => {
   };
   return (
     <>
-      <section className="qualification section">
+      <section className="qualification section p-4">
         <h2 className="section__title text-4xl md:text-5xl font-bold text-center text-gray-800 mb-10 ">
           Qualification
         </h2>
