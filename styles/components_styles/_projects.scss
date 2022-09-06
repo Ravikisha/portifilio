@@ -30,14 +30,14 @@
   left: 40%;
 }
 .rock-mountain_1 {
-  z-index: 8;
+  z-index: 2;
   left: 140px;
   bottom: 25px;
   width: 180px;
   height: 180px;
 }
 .rock-mountain_s_1 {
-  z-index: 7;
+  z-index: 1;
   transform: rotate(52deg);
   left: 125px;
   bottom: 25px;
@@ -46,14 +46,14 @@
   background: #111;
 }
 .rock-mountain_2 {
-  z-index: 11;
+  z-index: 4;
   left: -50px;
   bottom: 30px;
   width: 180px;
   height: 180px;
 }
 .rock-mountain_s_2 {
-  z-index: 10;
+  z-index: 3;
   transform: rotate(52deg);
   left: -65px;
   bottom: 30px;
@@ -62,14 +62,14 @@
   background: #111;
 }
 .rock-mountain_3 {
-  z-index: 10;
+  z-index: 3;
   left: 60px;
   bottom: 25px;
   width: 180px;
   height: 180px;
 }
 .rock-mountain_s_3 {
-  z-index: 9;
+  z-index: 2.5;
   transform: rotate(52deg);
   left: 45px;
   bottom: 25px;
@@ -79,7 +79,7 @@
 }
 .horizon div {
   left: 20%;
-  z-index: 15;
+  z-index: 4;
   position: absolute;
   bottom: 0;
   border-radius: 100px 100px 0 0;
@@ -88,14 +88,14 @@
   height: 150px;
 }
 .horizon div:nth-child(2) {
-  z-index: 15;
+  z-index: 4;
   left: 48%;
   bottom: 0px;
   height: 130px;
   background: linear-gradient(120deg, #333, #111);
 }
 .horizon div:nth-child(3) {
-  z-index: 14;
+  z-index: 3.9;
   background: linear-gradient(#222, #111);
   left: 40%;
   bottom: 0px;
@@ -103,14 +103,14 @@
   width: 150px;
 }
 .horizon div:nth-child(4) {
-  z-index: 14;
+  z-index: 3.9;
   background: linear-gradient(190deg, #333, #111);
   left: 38%;
   bottom: 20px;
   height: 170px;
 }
 .horizon div:nth-child(5) {
-  z-index: 15;
+  z-index: 4;
   left: 25%;
   bottom: 0px;
   height: 170px;
@@ -118,70 +118,70 @@
 }
 .horizon div:nth-child(6) {
   background: linear-gradient(180deg, #444, #111);
-  z-index: 14;
+  z-index: 3.9;
   left: 34%;
   bottom: 0px;
   height: 190px;
 }
 .horizon div:nth-child(7) {
   background: linear-gradient(170deg, #333, #111);
-  z-index: 13;
+  z-index: 3.7;
   left: 55%;
   bottom: 0;
   height: 140px;
 }
 .horizon div:nth-child(8) {
   background: linear-gradient(160deg, #444, #111);
-  z-index: 14;
+  z-index: 3.8;
   left: 50%;
   bottom: 0;
   height: 160px;
 }
 .horizon div:nth-child(9) {
   background: linear-gradient(170deg, #333, #111);
-  z-index: 15;
+  z-index: 4;
   left: 37%;
   bottom: 0px;
   height: 160px;
 }
 .horizon div:nth-child(10) {
   background: linear-gradient(-210deg, #333, #111);
-  z-index: 13;
+  z-index: 3.6;
   left: 55%;
   bottom: 0px;
   height: 160px;
 }
 .horizon div:nth-child(11) {
   background: linear-gradient(-180deg, #222, #111);
-  z-index: 13;
+  z-index: 3.6;
   left: 67%;
   bottom: 0px;
   height: 130px;
 }
 .horizon div:nth-child(12) {
   background: linear-gradient(-180deg, #222, #111);
-  z-index: 15;
+  z-index: 4;
   left: 70%;
   bottom: 0px;
   height: 100px;
 }
 .horizon div:nth-child(13) {
   background: linear-gradient(180deg, #333, #111);
-  z-index: 110;
+  z-index: 11;
   left: 15%;
   bottom: 0px;
   height: 100px;
 }
 .horizon div:nth-child(14) {
   background: linear-gradient(180deg, #333, #111);
-  z-index: 110;
+  z-index: 11;
   left: 75%;
   bottom: 0px;
   height: 100px;
 }
 .horizon div:nth-child(15) {
   background: linear-gradient(180deg, #333, #111);
-  z-index: 110;
+  z-index: 11;
   left: 60%;
   bottom: 0px;
   height: 130px;
@@ -191,7 +191,7 @@
   height: 600px;
   border-radius: 300px 400px 0 0;
   background: linear-gradient(130deg, #222, #000);
-  z-index: 12;
+  z-index: 3.2;
   left: 12%;
   bottom: -405px;
 }
@@ -200,7 +200,7 @@
   -moz-animation: satellit-anima 25s linear infinite;
   animation: satellit-anima 25s linear infinite;
   transform: rotate(120deg);
-  z-index: 5;
+  z-index: 3;
   color: #888;
   font-size: 18px;
   position: absolute;
@@ -209,7 +209,7 @@
 }
 
 .hill {
-  z-index: 14;
+  z-index: 3.9;
   background: linear-gradient(80deg, #333, #111);
   position: absolute;
   bottom: 5%;
@@ -325,7 +325,7 @@
   display: block;
   bottom: 10%;
   left: 46.5%;
-  z-index: 120;
+  z-index: 12;
   text-shadow: 2px 2px 2px #000;
 }
 .not-found {
@@ -335,7 +335,7 @@
 }
 
 .my-cat {
-  z-index: 100;
+  z-index: 10;
   position: absolute;
   left: 35%;
   bottom: 235px;
@@ -345,7 +345,7 @@
 .ear-fur-l,
 .ear-fur-r {
   position: relative;
-  z-index: 2;
+  z-index: .7;
   border-radius: 0 50px 0 0px;
   width: 12px;
   height: 14px;
@@ -376,7 +376,7 @@
   border-radius: 50px 0px 20px;
 }
 .head-cat {
-  z-index: 1;
+  z-index: 0.4;
   position: relative;
   border-radius: 50px;
   width: 40px;
@@ -462,7 +462,7 @@
   width: 7px;
   height: 3px;
   background: linear-gradient(#000, #d46);
-  z-index: 50;
+  z-index: 5;
   top: 30px;
   left: 17px;
 }
@@ -476,7 +476,7 @@
   width: 10px;
   height: 7px;
   background: #df9;
-  z-index: 500;
+  z-index: 50;
   top: 12px;
   left: 7px;
 }
@@ -494,7 +494,7 @@
   width: 7px;
   height: 6px;
   background: #000;
-  z-index: 500;
+  z-index: 3;
   left: 2px;
   top: 0px;
 }
@@ -507,7 +507,7 @@
   width: 7px;
   height: 7px;
   background: linear-gradient(#000, #555);
-  z-index: 500;
+  z-index: 50;
   margin: 19px 16px;
 }
 .body-cat {

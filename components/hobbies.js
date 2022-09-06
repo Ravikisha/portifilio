@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Hobbies = () => {
   return (
     <>
-      <h2 className="p-10 text-5xl font-bold text-center text-white bg-sky-500">
+      <h2 className="p-10 text-5xl font-bold text-center text-white bg-sky-500" id="hobbies">
           Hobbies
         </h2>
       <div className="hobbies__page min-h-screen mx-auto py-10 relative">

@@ -4,7 +4,7 @@ import Image from 'next/image';
 const MyselfAbout = () => {
   return (
     <>
-    <section className="min-h-screen grid grid-cols-4 lg:grid-cols-12 gap-14 max-w-screen-xl mx-auto py-10 px-7 md:px-16 relative">
+    <section className="min-h-screen grid grid-cols-4 lg:grid-cols-12 gap-14 max-w-screen-xl mx-auto py-10 px-7 md:px-16 relative" id="upcoming">
   <div className="col-span-4 lg:col-span-5 ">
     <div className="relative h-full">
       <Image width={700} height={1000} objectFit='cover' src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Leslie Alexander" className="w-full rounded-xl shadow-md md:rounded-2xl md:shadow-lg h-48 md:h-72 lg:h-full object-cover" />

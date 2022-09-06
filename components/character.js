@@ -11,7 +11,7 @@ const Character = () => {
   };
   return (
     <>
-      <div className="container__character">
+      <div className="container__character" id="characteristics">
         <div className="bannerVideo" id="slideShow">
           <video
             className={
