@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "../components/Homepage";
-import Map from "../components/Map";
+import Map from "../components/map";
 import Light from '../components/light';
 import ThreeDPage from "../components/threed_page";
 import WorkerSection from './../components/workerSection';
