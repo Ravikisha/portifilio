@@ -1,5 +1,6 @@
 import React,{useState,useRef,useEffect} from "react";
-
+import Image from 'next/image';
+import Link from 'next/link';
 const Year5 = () => {
   // const main_img = useRef(null);
   // const sec = useRef(null);
@@ -10,7 +11,7 @@ const Year5 = () => {
   //   }
   //   return ()=>makeChanges();
   // },[]);
-  const [imgSrc,setImgSrc] = useState('https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png');
+  const [imgSrc,setImgSrc] = useState('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
   const [secColor,setSecColor] = useState('#111');
 
   function makeChanges(src,color){
@@ -23,27 +24,27 @@ const Year5 = () => {
         <div className="sec__content">
           <div className="sec__textBox">
             <h2>
-              That&apos;s What <br /> <span>I Like</span>
+              That&apos;s What <br /> <span>I Build</span>
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-              illum totam ad placeat alias harum corrupti libero nisi id?
-              Numquam maxime debitis libero explicabo quasi repellat ex harum
-              sunt officia, perferendis incidunt.
+              I am a hardly working person. I always try to learn new things and best way to learn is to build something. I have built many projects and I am still learning. I love to do something innovative and creative things.
             </p>
-            <a href="#">View All Products</a>
+            <Link href="/projects">View All Projects</Link>
           </div>
           <div className="sec__imgBox">
-            <img
+            <Image
               src={imgSrc}
               alt="img"
+              width={500}
+              height={500}
+              objectFit={'cover'}
             />
           </div>
         </div>
         <ul className="sec__thumb">
-          <li><img src="https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png" alt="python" onClick={()=>makeChanges('https://seeklogo.com/images/P/python-logo-A32636CAA3-seeklogo.com.png','#444')}/></li>
-          <li><img src="https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png" alt="js"  onClick={()=>makeChanges('https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png','#666')}/></li>
-          <li><img src="https://seeklogo.com/images/A/azure-sql-database-logo-D7A32C9CD9-seeklogo.com.png" alt="dbms" onClick={()=>makeChanges('https://seeklogo.com/images/A/azure-sql-database-logo-D7A32C9CD9-seeklogo.com.png','#222')}/></li>
+          <li><Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width={50} height={50} objectFit="cover" alt="react" onClick={()=>makeChanges('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg','#111')}/></li>
+          <li><Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width={50} height={50} objectFit="cover" alt="python"  onClick={()=>makeChanges('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg','#293462')}/></li>
+          <li><Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width={50} height={50} objectFit="cover" alt="flutter" onClick={()=>makeChanges('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg','#194350')}/></li>
         </ul>
       </section>
     </>

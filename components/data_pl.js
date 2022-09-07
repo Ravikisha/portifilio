@@ -83,6 +83,14 @@ export const data = [
         ]
     },
     {
+        "name": "Next Js",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        "codelink": "https://www.google.com/search?q=next+js+frontend",
+        "tags": [
+            "frontend"
+        ]
+    },
+    {
         "name": "Redux",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
         "codelink": "https://www.google.com/search?q=redux+frontend",
@@ -195,6 +203,14 @@ export const data = [
         ]
     },
     {
+        "name": "Node Js",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        "codelink": "https://www.google.com/search?q=node+js+backend",
+        "tags": [
+            "backend"
+        ]
+    },
+    {
         "name": "CakePhp",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cakephp/cakephp-original.svg",
         "codelink": "https://www.google.com/search?q=cakephp+backend",
@@ -238,7 +254,7 @@ export const data = [
     {
         "name": "SQL Server",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-        "codelink": "https://www.google.com/search?q=postgresql+database",
+        "codelink": "https://www.google.com/search?q=SQL+server+database",
         "tags": [
             "backend",
             "database"
@@ -470,6 +486,14 @@ export const data = [
         "codelink": "https://www.google.com/search?q=Dart+Programming+Language",
         "tags": [
             "PL"
+        ]
+    },
+    {
+        "name": "PostGreSQL",   
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "codelink": "https://www.google.com/search?q=postgresql+database",
+        "tags": [
+            "backend"
         ]
     },
     

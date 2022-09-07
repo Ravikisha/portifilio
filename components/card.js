@@ -65,7 +65,7 @@ const Card = ({ PL }) => {
               height="150"
               objectFit="contain"
               src={PL.imageUrl}
-              alt="image"
+              alt={PL.name}
             />
           </div>
         </motion.div>
