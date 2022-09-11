@@ -10,7 +10,7 @@ const MyselfAbout = () => {
       <Image width={700} height={1000} objectFit='cover' src="https://images.unsplash.com/photo-1519834785169-98be25ec3f84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Leslie Alexander" className="w-full rounded-xl shadow-md md:rounded-2xl md:shadow-lg h-48 md:h-72 lg:h-full object-cover" />
       <div className="absolute bottom-0 text-white bg-gradient-to-b from-transparent to-gray-700 rounded-2xl h-auto p-5 md:p-10">
         <span className="mb-2 inline-block text-sm font-bold text-white">Alan Turing</span>
-        <p className="text-sm leading-relaxed">“Sometimes it is the people no one imagines anything of whi do the things that no-one can imagine.”</p>
+        <p className="text-sm leading-relaxed">“Sometimes it is the people no one imagines anything of who do the things that no-one can imagine.”</p>
       </div>
     </div>
   </div>

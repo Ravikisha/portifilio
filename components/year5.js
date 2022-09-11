@@ -2,15 +2,6 @@ import React,{useState,useRef,useEffect} from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 const Year5 = () => {
-  // const main_img = useRef(null);
-  // const sec = useRef(null);
-  // useEffect(()=>{
-  //   function makeChanges(src,color){
-  //     main_img.current.src = src;
-  //     sec.current.style.backgroundColor = color;
-  //   }
-  //   return ()=>makeChanges();
-  // },[]);
   const [imgSrc,setImgSrc] = useState('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
   const [secColor,setSecColor] = useState('#111');
 
@@ -29,7 +20,10 @@ const Year5 = () => {
             <p>
               I am a hardly working person. I always try to learn new things and best way to learn is to build something. I have built many projects and I am still learning. I love to do something innovative and creative things.
             </p>
+            <div className="flex gap-3">
             <Link href="/projects">View All Projects</Link>
+            <Link href="/skills">View My SKills</Link>
+            </div>
           </div>
           <div className="sec__imgBox">
             <Image

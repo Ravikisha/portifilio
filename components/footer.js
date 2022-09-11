@@ -150,7 +150,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="https://www.linkedin.com/in/ravi-kishan-62ab51221/">
-                  <a clasName="_blank">
+                  <a target="_blank">
                   <i className="uil uil-linkedin-alt text-3xl"></i>
                 </a>
                 </Link>

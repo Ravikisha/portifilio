@@ -2,9 +2,10 @@ import React from "react";
 import HomePage from "../components/Homepage";
 import Map from "../components/map";
 import Light from '../components/light';
-import ThreeDPage from "../components/threed_page";
+// import ThreeDPage from "../components/threed_page";
 import WorkerSection from './../components/workerSection';
 import Head from 'next/head';
+import ProjectReference from './../components/projectReference';
 const Home = () => {
   return (
     <>
@@ -16,10 +17,11 @@ const Home = () => {
         <HomePage />
       </section>
       <Light />
-      <ThreeDPage/>
-      <section className="map">
+      {/* <ThreeDPage/> */}
+      <ProjectReference />
+      {/* <section className="map"> */}
       <Map className="map__page" />
-      </section>
+      {/* </section> */}
       <WorkerSection />
     </>
   );
