@@ -496,6 +496,14 @@ export const data = [
             "backend"
         ]
     },
+    {
+        "name": "Linux",   
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+        "codelink": "https://www.google.com/search?q=linux+os",
+        "tags": [
+            "others"
+        ]
+    },
     
     
 ]

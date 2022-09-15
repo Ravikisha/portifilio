@@ -1,52 +1,53 @@
 import React from "react";
 import jsPDF from "jspdf";
 import Myphoto from "../assets/about.jpg";
-import html2canvas from 'html2canvas';
-import Head from 'next/head';
-import Image from 'next/image';
+import html2canvas from "html2canvas";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
 const Resume = () => {
   const [darkTheme, setDarkTheme] = React.useState(false);
   const generateResume = () => {
-
-    if(typeof window !== 'undefined'){
+    if (typeof window !== "undefined") {
       // setScaleCv(true);
       const input = document.getElementById("resume");
-      html2canvas(input,{logging:true,scale: 2, useCORS: true}).then(canvas => {
-          const imgData = canvas.toDataURL('image/jpeg');
-        const pdf = new jsPDF('p','pt',[canvas.width, canvas.height]);
-  var pdfWidth = pdf.internal.pageSize.getWidth();
-      var pdfHeight = pdf.internal.pageSize.getHeight();
-        pdf.addImage(imgData, 'JPEG', 0,0,pdfWidth, pdfHeight);
-        pdf.save("download.pdf");
-        setScaleCv(false);
-      }).catch(err => {
-        console.log(err);
-      })
+      html2canvas(input, { logging: true, scale: 2, useCORS: true })
+        .then((canvas) => {
+          const imgData = canvas.toDataURL("image/jpeg");
+          const pdf = new jsPDF("p", "pt", [canvas.width, canvas.height]);
+          var pdfWidth = pdf.internal.pageSize.getWidth();
+          var pdfHeight = pdf.internal.pageSize.getHeight();
+          pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
+          pdf.save("download.pdf");
+          setScaleCv(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  }
-
+  };
 
   return (
     <>
-    <Head>
+      <Head>
         <title>My Resume</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-        <div
-          className={` ${
-            darkTheme ? "dark-theme main__div " : "light-theme main__div"
-          }`}
-        >
-          <div className="resume" id="resume">
-            <main className="l-main bd-container">
-              <div className="resume__container">
-                <div className="resume__left">
-                  {/* home */}
-                  <section className="resume__home" id="home">
-                    <div className="resume__home__container section bd-grid">
-                      <div className="resume__home__data bd-grid">
-                        <div className="resume__home__img">
+      <div
+        className={` ${
+          darkTheme ? "dark-theme main__div " : "light-theme main__div"
+        }`}
+      >
+        <div className="resume" id="resume">
+          <main className="l-main bd-container">
+            <div className="resume__container">
+              <div className="resume__left">
+                {/* home */}
+                <section className="resume__home" id="home">
+                  <div className="resume__home__container section bd-grid">
+                    <div className="resume__home__data bd-grid">
+                      <div className="resume__home__img">
                         <Image
                           src={Myphoto.src}
                           alt="MyImage"
@@ -55,336 +56,342 @@ const Resume = () => {
                           objectFit="cover"
                           className="rounded-full"
                         />
-                        </div>
-
-                        <h1 className="resume__home__title">
-                          Ravi <b>Kishan</b>
-                        </h1>
-                        <h3 className="resume__home__profession">
-                          Full Stack Developer
-                        </h3>
-
-                        <div>
-                          <a
-                          data-html2canvas-ignore
-                            download=""
-                            href="#"
-                            className="resume__home__button__movil"
-                          >
-                            Download
-                          </a>
-                        </div>
                       </div>
-                      <div className="resune__home__address bd-grid">
-                        <span className="resume__home__information">
-                          <i className="uil uil-map-marker resume__home__icon"></i>{" "}
-                          Sari. Samastipur #123 Bihar - India
-                        </span>
-                        <span className="resume__home__information">
-                          <i className="uil uil-envelopes resume__home__icon"></i>{" "}
-                          ravikishan63392@gmail.com
-                        </span>
-                        <span className="resume__home__information">
-                          <i className="uil uil-phone resume__home__icon"></i>{" "}
-                          +91-7061133910
-                        </span>
+
+                      <h1 className="resume__home__title">
+                        Ravi <b>Kishan</b>
+                      </h1>
+                      <h3 className="resume__home__profession">
+                        Full Stack Developer
+                      </h3>
+
+                      <div>
+                        <a
+                          data-html2canvas-ignore
+                          download=""
+                          href="#"
+                          className="resume__home__button__movil"
+                        >
+                          Download
+                        </a>
                       </div>
                     </div>
-                    <i
+                    <div className="resune__home__address bd-grid">
+                      <span className="resume__home__information">
+                        <i className="uil uil-map-marker resume__home__icon"></i>{" "}
+                        Sari. Samastipur #123 Bihar - India
+                      </span>
+                      <span className="resume__home__information">
+                        <i className="uil uil-envelopes resume__home__icon"></i>{" "}
+                        ravikishan63392@gmail.com
+                      </span>
+                      <span className="resume__home__information">
+                        <i className="uil uil-phone resume__home__icon"></i>{" "}
+                        +91-7061133910
+                      </span>
+                    </div>
+                  </div>
+                  <i
                     data-html2canvas-ignore
-                      className={
-                        darkTheme
-                          ? "uil uil-sun resume__home__change__theme"
-                          : "uil uil-moon resume__home__change__theme"
-                      }
-                      title="Theme"
-                      id="theme-button"
-                      onClick={() => setDarkTheme(!darkTheme)}
-                    ></i>
-                    <i
+                    className={
+                      darkTheme
+                        ? "uil uil-sun resume__home__change__theme"
+                        : "uil uil-moon resume__home__change__theme"
+                    }
+                    title="Theme"
+                    id="theme-button"
+                    onClick={() => setDarkTheme(!darkTheme)}
+                  ></i>
+                  <i
                     data-html2canvas-ignore
-                      className="uil uil-download-alt resume__home__generate-pdf"
-                      title="Generate PDF"
-                      id="resume-button"
-                      onClick={()=>generateResume()}
-                    ></i>
-                  </section>
-                  {/* social */}
-                  <section className="resume__social resume__section">
-                    <h2 className="resume__section__title">SOCIAL</h2>
-                    <div className="resume__social__container bd-grid">
-                      <a
-                        href=""
-                        target="_blank"
-                        className="resume__social__link"
-                      >
+                    className="uil uil-download-alt resume__home__generate-pdf"
+                    title="Generate PDF"
+                    id="resume-button"
+                    onClick={() => generateResume()}
+                  ></i>
+                </section>
+                {/* social */}
+                <section className="resume__social resume__section">
+                  <h2 className="resume__section__title">SOCIAL</h2>
+                  <div className="resume__social__container bd-grid">
+                    <Link href="https://www.linkedin.com/in/ravi-kishan-62ab51221/">
+                      <a target="_blank" className="resume__social__link">
                         <i className="uil uil-linkedin resume__social__icon"></i>{" "}
                         ravi-kishan-62ab51221
                       </a>
-                      <a
-                        href=""
-                        target="_blank"
-                        className="resume__social__link"
-                      >
+                    </Link>
+                    <Link href="https://www.instagram.com/ravikishan.69/">
+                      <a target="_blank" className="resume__social__link">
                         <i className="uil uil-instagram resume__social__icon"></i>{" "}
                         @ravikishan.69
                       </a>
-                      <a
-                        href=""
-                        target="_blank"
-                        className="resume__social__link"
-                      >
+                    </Link>
+                    <Link href="https://github.com/Ravikisha">
+                      <a target="_blank" className="resume__social__link">
                         <i className="uil uil-github resume__social__icon"></i>{" "}
                         ravikisha
                       </a>
-                    </div>
-                  </section>
-                  <section
-                    className="resume__profile resume__section"
-                    id="profile"
-                  >
-                    <h2 className="resume__section__title">Profile</h2>
-                    <p className="resume__profile__description">
-                      I am a Full Stack Developer with 1+ years of experience in
-                      the development of web applications. I have worked on
-                      various projects using different technologies. I am a
-                      quick learner and a team player. I am always ready to
-                      learn new technologies and improve my skills. I am looking
-                      for a challenging role in a reputed organization where I
-                      can utilize my skills and knowledge to the best of my
-                      abilities.
-                    </p>
-                  </section>
-                  <section
-                    className="resume__education resume__section"
-                    id="education"
-                  >
-                    <h2 className="resume__section__title">Education</h2>
-                    <div className="resume__education__container bd-grid">
-                      <div className="resume__education__content">
-                        <div className="resume__education__time">
-                          <span className="resume__education__rounded"></span>
-                          <span className="resume__education__line"></span>
-                        </div>
-                        <div className="resume__education__data bd-grid">
-                          <h3 className="resume__education__title">
-                            {" "}
-                            Bachelor of Computer Application{" "}
-                          </h3>
-                          <span className="resume__education__studies">
-                            Prestige Institute of Management & Research
-                          </span>
-                          <span className="resume__education__year">
-                            2021 - Present
-                          </span>
-                        </div>
+                    </Link>
+                  </div>
+                </section>
+                <section
+                  className="resume__profile resume__section"
+                  id="profile"
+                >
+                  <h2 className="resume__section__title">Profile</h2>
+                  <p className="resume__profile__description">
+                    I am a Full Stack Developer with 1+ years of personal
+                    project experience in the development of web applications. I
+                    have worked on various projects using different
+                    technologies. I am a quick learner and a team player. I am
+                    always ready to learn new technologies and improve my
+                    skills. I am looking for a challenging role in a reputed
+                    organization where I can utilize my skills and knowledge to
+                    the best of my abilities.
+                  </p>
+                </section>
+                <section
+                  className="resume__education resume__section"
+                  id="education"
+                >
+                  <h2 className="resume__section__title">Education</h2>
+                  <div className="resume__education__container bd-grid">
+                    <div className="resume__education__content">
+                      <div className="resume__education__time">
+                        <span className="resume__education__rounded"></span>
+                        <span className="resume__education__line"></span>
                       </div>
-                      <div className="resume__education__content">
-                        <div className="resume__education__time">
-                          <span className="resume__education__rounded"></span>
-                          <span className="resume__education__line"></span>
-                        </div>
-                        <div className="resume__education__data bd-grid">
-                          <h3 className="resume__education__title">
-                            {" "}
-                            Intermediate (Math) {" "}
-                          </h3>
-                          <span className="resume__education__studies">
-                            BSEB, Patna
-                          </span>
-                          <span className="resume__education__year">
-                            2019-2021
-                          </span>
-                        </div>
-                      </div>
-                      <div className="resume__education__content">
-                        <div className="resume__education__time">
-                          <span className="resume__education__rounded"></span>
-                          <span className="resume__education__line"></span>
-                        </div>
-                        <div className="resume__education__data bd-grid">
-                          <h3 className="resume__education__title">
-                            {" "}
-                            Matriculation{" "}
-                          </h3>
-                          <span className="resume__education__studies">
-                            BSEB, Patna
-                          </span>
-                          <span className="resume__education__year">
-                            2018 - 2019
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  <section className="resume__languages resume__section">
-                    <h2 className="resume__section__title">Languages</h2>
-
-                    <div className="resume__languages__container">
-                      <ul className="resume__languages__content bd-grid">
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          English
-                        </li>
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          Hindi
-                        </li>
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          Mathili
-                        </li>
-                        <li className="resume__languages__name">
-                          <span className="resume__languages__circle"></span>{" "}
-                          Bhojpuri
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
-                  <section className="resume__interests resume__section">
-                    <h2 className="resume__section__title">Interests</h2>
-
-                    <div className="resume__interests__container bd-grid">
-                      <div className="resume__interests__content">
-                        <i className="uil uil-subway"></i>
-                        <span className="resume__interests__name">Traveling</span>
-                      </div>
-                      <div className="resume__interests__content">
-                        <i className="uil uil-ticket"></i>
-                        <span className="resume__interests__name">Watching Movies</span>
-                      </div>
-                      <div className="resume__interests__content">
-                        <i className="uil uil-book-reader"></i>
-                        <span className="resume__interests__name">Reading</span>
-                      </div>
-                    </div>
-                  </section>
-                  
-                </div>
-                <div className="resume__right">
-                  <section
-                    className="resume__experience resume__section"
-                    id="experience"
-                  >
-                    <h2 className="resume__section__title">Experience</h2>
-
-                    <div className="resume__experience__container bd-grid">
-                      <div className="resume__experience__content">
-                        <div className="resume__experience__time">
-                          <span className="resume__experience__rounded"></span>
-                          <span className="resume__experience__line"></span>
-                        </div>
-                        <div className="resume__experience__data bd-grid">
-                          <h3 className="resume__experience__title">
-                            Software Developer
-                          </h3>
-                          <span className="resume__experience__company">
-                            From 2013 to 2015 | Microsoft Corporation
-                          </span>
-                          <p className="resume__experience__description">
-                            I have worked on various projects using different
-                            technologies. I am a quick learner and a team
-                            player. I am always ready to learn new technologies
-                            and improve my skills. I am looking for a
-                            challenging role in a reputed organization where I
-                            can utilize my skills and knowledge to the best of
-                            my abilities.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="resume__experience__content">
-                        <div className="resume__experience__time">
-                          <span className="resume__experience__rounded"></span>
-                          <span className="resume__experience__line"></span>
-                        </div>
-                        <div className="resume__experience__data bd-grid">
-                          <h3 className="resume__experience__title">
-                            Software Developer
-                          </h3>
-                          <span className="resume__experience__company">
-                            From 2013 to 2015 | Microsoft Corporation
-                          </span>
-                          <p className="resume__experience__description">
-                            I have worked on various projects using different
-                            technologies. I am a quick learner and a team
-                            player. I am always ready to learn new technologies
-                            and improve my skills. I am looking for a
-                            challenging role in a reputed organization where I
-                            can utilize my skills and knowledge to the best of
-                            my abilities.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="resume__experience__content">
-                        <div className="resume__experience__time">
-                          <span className="resume__experience__rounded"></span>
-                          <span className="resume__experience__line"></span>
-                        </div>
-                        <div className="resume__experience__data bd-grid">
-                          <h3 className="resume__experience__title">
-                            Software Developer
-                          </h3>
-                          <span className="resume__experience__company">
-                            From 2013 to 2015 | Microsoft Corporation
-                          </span>
-                          <p className="resume__experience__description">
-                            I have worked on various projects using different
-                            technologies. I am a quick learner and a team
-                            player. I am always ready to learn new technologies
-                            and improve my skills. I am looking for a
-                            challenging role in a reputed organization where I
-                            can utilize my skills and knowledge to the best of
-                            my abilities.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  <section
-                    className="resume__certificate resume__section"
-                    id="certificates"
-                  >
-                    <h2 className="resume__section__title">Certificates</h2>
-                    <div className="resume__certificate__container bd-grid">
-                      <div className="resume__certificate__content">
-                        <h3 className="resume__certificate__title">
+                      <div className="resume__education__data bd-grid">
+                        <h3 className="resume__education__title">
                           {" "}
-                          Microsoft Certified Professional - Web Developer
+                          Bachelor of Computer Application{" "}
                         </h3>
-                        <p className="resume__certificate__description">
-                          Microsoft Certified Professional - Web Developer -
-                          MCPWD - 1 - 2019 - Microsoft Corporation - Redmond, WA
-                          - USA - Microsoft Corporation for the exprience of my
-                          web development skills
-                        </p>
+                        <span className="resume__education__studies">
+                          Prestige Institute of Management & Research
+                        </span>
+                        <span className="resume__education__year">
+                          2021 - Present
+                        </span>
                       </div>
-                      <div className="resume__certificate__content">
-                        <h3 className="resume__certificate__title">
-                          {" "}
-                          Microsoft Certified Professional - Web Developer
-                        </h3>
-                        <p className="resume__certificate__description">
-                          Microsoft Certified Professional - Web Developer -
-                          MCPWD - 1 - 2019 - Microsoft Corporation - Redmond, WA
-                          - USA - Microsoft Corporation for the exprience of my
-                          web development skills
-                        </p>
+                    </div>
+                    <div className="resume__education__content">
+                      <div className="resume__education__time">
+                        <span className="resume__education__rounded"></span>
+                        <span className="resume__education__line"></span>
                       </div>
-                      <div className="resume__certificate__content">
-                        <h3 className="resume__certificate__title">
+                      <div className="resume__education__data bd-grid">
+                        <h3 className="resume__education__title">
                           {" "}
-                          Microsoft Certified Professional - Web Developer
+                          Intermediate (Math){" "}
                         </h3>
-                        <p className="resume__certificate__description">
-                          Microsoft Certified Professional - Web Developer -
-                          MCPWD - 1 - 2019 - Microsoft Corporation - Redmond, WA
-                          - USA - Microsoft Corporation for the exprience of my
-                          web development skills
+                        <span className="resume__education__studies">
+                          BSEB, Patna
+                        </span>
+                        <span className="resume__education__year">
+                          2019-2021
+                        </span>
+                      </div>
+                    </div>
+                    <div className="resume__education__content">
+                      <div className="resume__education__time">
+                        <span className="resume__education__rounded"></span>
+                        <span className="resume__education__line"></span>
+                      </div>
+                      <div className="resume__education__data bd-grid">
+                        <h3 className="resume__education__title">
+                          {" "}
+                          Matriculation{" "}
+                        </h3>
+                        <span className="resume__education__studies">
+                          BSEB, Patna
+                        </span>
+                        <span className="resume__education__year">
+                          2018 - 2019
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section className="resume__languages resume__section">
+                  <h2 className="resume__section__title">Languages</h2>
+
+                  <div className="resume__languages__container">
+                    <ul className="resume__languages__content bd-grid">
+                      <li className="resume__languages__name">
+                        <span className="resume__languages__circle"></span>{" "}
+                        English
+                      </li>
+                      <li className="resume__languages__name">
+                        <span className="resume__languages__circle"></span>{" "}
+                        Hindi
+                      </li>
+                      <li className="resume__languages__name">
+                        <span className="resume__languages__circle"></span>{" "}
+                        Mathili
+                      </li>
+                      <li className="resume__languages__name">
+                        <span className="resume__languages__circle"></span>{" "}
+                        Bhojpuri
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+                <section className="resume__interests resume__section">
+                  <h2 className="resume__section__title">Interests</h2>
+
+                  <div className="resume__interests__container bd-grid">
+                    <div className="resume__interests__content">
+                      <i className="uil uil-subway"></i>
+                      <span className="resume__interests__name">Traveling</span>
+                    </div>
+                    <div className="resume__interests__content">
+                      <i className="uil uil-ticket"></i>
+                      <span className="resume__interests__name">
+                        Watching Movies
+                      </span>
+                    </div>
+                    <div className="resume__interests__content">
+                      <i className="uil uil-book-reader"></i>
+                      <span className="resume__interests__name">Reading</span>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div className="resume__right">
+                <section
+                  className="resume__experience resume__section"
+                  id="experience"
+                >
+                  <h2 className="resume__section__title">Projects</h2>
+
+                  <div className="resume__experience__container bd-grid">
+                    <div className="resume__experience__content">
+                      <div className="resume__experience__time">
+                        <span className="resume__experience__rounded"></span>
+                        <span className="resume__experience__line"></span>
+                      </div>
+                      <div className="resume__experience__data bd-grid">
+                        <h3 className="resume__experience__title">
+                          My Portifilio
+                        </h3>
+                        <span className="resume__experience__company">
+                          Portifilio Site | Ravi Kishan
+                        </span>
+                        <p className="resume__experience__description">
+                          I made this website as my portifilio. I used React,
+                          Next.js, sass, Tailwind CSS, and Framer Motion for
+                          this project. I used Next.js for server side rendering
+                          and SEO. I used Framer Motion for animations. I used
+                          Tailwind CSS for styling. I used sass for styling.In
+                          this site, I use firebase for contact form. I use
+                          vercel for deployment. It
+                          is so easy to use. Site is online now on{" "}
+                          <Link href="/">
+                            <a
+                              target="_blank"
+                              className="ml-2 underline text-sky-500"
+                            >
+                              This
+                            </a>
+                          </Link>
                         </p>
                       </div>
                     </div>
-                  </section>
-                  <section
+                    <div className="resume__experience__content">
+                      <div className="resume__experience__time">
+                        <span className="resume__experience__rounded"></span>
+                        <span className="resume__experience__line"></span>
+                      </div>
+                      <div className="resume__experience__data bd-grid">
+                        <h3 className="resume__experience__title">
+                          International Conference
+                        </h3>
+                        <span className="resume__experience__company">
+                          Official Site | Prestige Institute of Management &
+                          Research
+                        </span>
+                        <p className="resume__experience__description">
+                          I made this website as an official site for an
+                          international conference. I used React, Plain CSS, and
+                          Tailwind CSS for this project. I use firebase for
+                          contact form. I use netlify for deployment. It has so
+                          many features like collage details, conference
+                          details, and contact form. It is fully responsive. It
+                          is so easy to use. Site is online now on<Link href="https://statuesque-moxie-abc30a.netlify.app/">
+                            <a
+                              target="_blank"
+                              className="ml-2 text-sky-500"
+                            >https://statuesque-moxie-abc30a.netlify.app/
+                            </a>
+                          </Link>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="resume__experience__content">
+                      <div className="resume__experience__time">
+                        <span className="resume__experience__rounded"></span>
+                        <span className="resume__experience__line"></span>
+                      </div>
+                      <div className="resume__experience__data bd-grid">
+                        <h3 className="resume__experience__title">
+                          Social App
+                        </h3>
+                        <span className="resume__experience__company">
+                          Collage Project | Prestige Institute of Management &
+                          Research
+                        </span>
+                        <p className="resume__experience__description">
+                          I made this website as a social app. I used React, Next.js, Sass, Tailwind CSS for frontend and Laravel, PostgreSQL and Redis for backend. This project is for collage submittion. I made this website with my small team and we got 1st prize in collage. 
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  className="resume__certificate resume__section"
+                  id="certificates"
+                >
+                  <h2 className="resume__section__title">Certificates</h2>
+                  <div className="resume__certificate__container bd-grid">
+                    <div className="resume__certificate__content">
+                      <h3 className="resume__certificate__title">
+                        {" "}
+                        Microsoft Certified Professional - Web Developer
+                      </h3>
+                      <p className="resume__certificate__description">
+                        Microsoft Certified Professional - Web Developer - MCPWD
+                        - 1 - 2019 - Microsoft Corporation - Redmond, WA - USA -
+                        Microsoft Corporation for the exprience of my web
+                        development skills
+                      </p>
+                    </div>
+                    <div className="resume__certificate__content">
+                      <h3 className="resume__certificate__title">
+                        {" "}
+                        Microsoft Certified Professional - Web Developer
+                      </h3>
+                      <p className="resume__certificate__description">
+                        Microsoft Certified Professional - Web Developer - MCPWD
+                        - 1 - 2019 - Microsoft Corporation - Redmond, WA - USA -
+                        Microsoft Corporation for the exprience of my web
+                        development skills
+                      </p>
+                    </div>
+                    <div className="resume__certificate__content">
+                      <h3 className="resume__certificate__title">
+                        {" "}
+                        Microsoft Certified Professional - Web Developer
+                      </h3>
+                      <p className="resume__certificate__description">
+                        Microsoft Certified Professional - Web Developer - MCPWD
+                        - 1 - 2019 - Microsoft Corporation - Redmond, WA - USA -
+                        Microsoft Corporation for the exprience of my web
+                        development skills
+                      </p>
+                    </div>
+                  </div>
+                </section>
+                {/* <section
                     className="resume__references resume__section"
                     id="references"
                   >
@@ -416,66 +423,408 @@ const Resume = () => {
                         </ul>
                       </div>
                     </div>
-                  </section>
-                  <div className="resume__skills resume__section" id="skills">
-                    <h2 className="resume__section__title">Skills</h2>
+                  </section> */}
+                <div className="resume__skills resume__section" id="skills">
+                  <h2 className="resume__section__title">Skills</h2>
 
-                    <div className="resume__skills__content bd-grid">
-                      <ul className="resume__skills__data">
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>Python
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>
-                          Javascript
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>DBMS
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>Java
-                        </li>
-                      </ul>
+                  <div className="resume__skills__content bd-grid">
+                    <ul className="resume__skills__data">
+                      <h2 className="mb-3">
+                        Programming <br />
+                        Language
+                      </h2>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="python"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        />
+                        <span className="ml-2">Python</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="javascript"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        />
+                        <span className="ml-2">JavaScript</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="java"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                        />
+                        <span className="ml-2">Java</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="php"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                        />
+                        <span className="ml-2">Php</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="typescript"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        />
+                        <span className="ml-2">TypeScript</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="c#"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                        />
+                        <span className="ml-2">C#</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="c++"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                        />
+                        <span className="ml-2">C++</span>
+                      </li>
+                    </ul>
 
-                      <ul className="resume__skills__data">
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>React
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>scss
-                        </li>
-                        <li className="resume__skills__name">
-                          <span className="resume__skills__circle"></span>
-                          Firebase
-                        </li>
-                      </ul>
-                    </div>
+                    <ul className="resume__skills__data">
+                      <h2 className="mb-3">Frontend</h2>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="react"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        />
+                        <span className="ml-2">React</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="next js"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                        />
+                        <span className="ml-2">Next.js</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="redux"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                        />
+                        <span className="ml-2">Redux</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="sass"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                        />
+                        <span className="ml-2">Sass</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="tailwindcss"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                        />
+                        <span className="ml-2">TailwindCss</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="jquery"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+                        />
+                        <span className="ml-2">JQuery</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="wordpress"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                        />
+                        <span className="ml-2">WordPress</span>
+                      </li>
+                    </ul>
+                    <ul className="resume__skills__data">
+                      <h2 className="mb-3">Backend</h2>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="express"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                        />
+                        <span className="ml-2">Express</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="django"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                        />
+                        <span className="ml-2">Django</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="flask"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                        />
+                        <span className="ml-2">Flask</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="laravel"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+                        />
+                        <span className="ml-2">Laravel</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="mysql"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                        />
+                        <span className="ml-2">MySQL</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="postgresql"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        />
+                        <span className="ml-2">PostgreSQL</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="graphql"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                        />
+                        <span className="ml-2">GraphQL</span>
+                      </li>
+                    </ul>
+                    <ul className="resume__skills__data">
+                      <h2 className="mb-3">
+                        App
+                        <br />
+                        Development
+                      </h2>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="flutter"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                        />
+                        <span className="ml-2">Flutter</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="java android"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+                        />
+                        <span className="ml-2">Java Android</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="kotlin android"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                        />
+                        <span className="ml-2">Kotlin Android</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="react native"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                        />
+                        <span className="ml-2">React Native</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="ionic"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg"
+                        />
+                        <span className="ml-2">Ionic</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt=".net core"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                        />
+                        <span className="ml-2">.Net Core</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="electron"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg"
+                        />
+                        <span className="ml-2">Electron</span>
+                      </li>
+                    </ul>
+                    <ul className="resume__skills__data">
+                      <h2 className="mb-3">Others</h2>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="git"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                        />
+                        <span className="ml-2">Git</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="github"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        />
+                        <span className="ml-2">GitHub</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="docker"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        />
+                        <span className="ml-2">Docker</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="kubernetes"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                        />
+                        <span className="ml-2">Kubernetes</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="vscode"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                        />
+                        <span className="ml-2">VSCode</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="bash"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                        />
+                        <span className="ml-2">Bash</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="markdown"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg"
+                        />
+                        <span className="ml-2">MarkDown</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="ubuntu"
+                          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"
+                        />
+                        <span className="ml-2">Ubuntu</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="data science"
+                          src="https://4achievers.in/frontend/images/data-science-training.svg"
+                        />
+                        <span className="ml-2">Data Science</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                          width={30}
+                          height={30}
+                          alt="data science"
+                          src="https://hackr.io/tutorials/machine-learning-ml/logo-machine-learning-ml.svg"
+                        />
+                        <span className="ml-2">Machine Learning</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            </main>
-            <a data-html2canvas-ignore href="#" className="scrollTop" id="scroll-top">
-              <i className="uil uil-arrow-up scrollTop__icon"></i>
-            </a>
-          </div>
+            </div>
+          </main>
+          <a
+            data-html2canvas-ignore
+            href="#"
+            className="scrollTop"
+            id="scroll-top"
+          >
+            <i className="uil uil-arrow-up scrollTop__icon"></i>
+          </a>
         </div>
+      </div>
     </>
   );
 };
 
 export default Resume;
 
-  // function generateResume() {
-  //   var data = document.getElementById('resume');
-  //   html2canvas(data, { useCORS:true}) // useCORS is optional if your images are externally hosted somewhere like s3
-  //   .then(canvas => {
-  //     const contentDataURL = canvas.toDataURL('image/png')
-  //     let pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
-  //     var pdfWidth = pdf.internal.pageSize.getWidth();
-  //     var pdfHeight = pdf.internal.pageSize.getHeight();
-  //     pdf.addImage(contentDataURL, 'PNG',  pdfWidth, pdfHeight);
-  //     //  pdf.save('new-file.pdf');
-  //     window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
-  //   });
- 
-  // }
+// function generateResume() {
+//   var data = document.getElementById('resume');
+//   html2canvas(data, { useCORS:true}) // useCORS is optional if your images are externally hosted somewhere like s3
+//   .then(canvas => {
+//     const contentDataURL = canvas.toDataURL('image/png')
+//     let pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
+//     var pdfWidth = pdf.internal.pageSize.getWidth();
+//     var pdfHeight = pdf.internal.pageSize.getHeight();
+//     pdf.addImage(contentDataURL, 'PNG',  pdfWidth, pdfHeight);
+//     //  pdf.save('new-file.pdf');
+//     window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
+//   });
+
+// }

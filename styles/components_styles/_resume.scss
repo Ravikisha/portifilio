@@ -93,7 +93,7 @@
   }
   .bd-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   &__section {
     padding: 1.5rem 0;
@@ -225,7 +225,7 @@
   }
   &__skills {
     &__content {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       // gap: 0;
     }
     &__name {
@@ -423,4 +423,10 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 350px) {
+    .resume__skills__content{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
