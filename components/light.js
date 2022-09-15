@@ -3,8 +3,9 @@ import LampImg from "../assets/lamp.png";
 import LightImg from "../assets/light.png";
 import Image from "next/image";
 import Link from "next/link";
-import {prefix} from './prefix';
+// import {prefix} from './prefix';
 
+const prefix = '/portifilio';
 const Light = () => {
   const [checked, setChecked] = useState(true);
   return (
