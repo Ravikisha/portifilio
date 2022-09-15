@@ -1,6 +1,6 @@
 import React from "react";
 import jsPDF from "jspdf";
-import Myphoto from "../assets/about.jpg";
+import Myphoto from "../assets/me1edit.jpg";
 import html2canvas from "html2canvas";
 import Head from "next/head";
 import Image from "next/image";
@@ -15,7 +15,7 @@ const Resume = () => {
       html2canvas(input, { logging: true, scale: 2, useCORS: true })
         .then((canvas) => {
           const imgData = canvas.toDataURL("image/jpeg");
-          const pdf = new jsPDF("p", "pt", [canvas.width, canvas.height]);
+          const pdf = new jsPDF("p", "pt2", [canvas.width, canvas.height]);
           var pdfWidth = pdf.internal.pageSize.getWidth();
           var pdfHeight = pdf.internal.pageSize.getHeight();
           pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
@@ -65,7 +65,7 @@ const Resume = () => {
                         Full Stack Developer
                       </h3>
 
-                      <div>
+                      {/* <div>
                         <a
                           data-html2canvas-ignore
                           download=""
@@ -74,7 +74,7 @@ const Resume = () => {
                         >
                           Download
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div className="resune__home__address bd-grid">
                       <span className="resume__home__information">
@@ -284,8 +284,8 @@ const Resume = () => {
                           and SEO. I used Framer Motion for animations. I used
                           Tailwind CSS for styling. I used sass for styling.In
                           this site, I use firebase for contact form. I use
-                          vercel for deployment. It
-                          is so easy to use. Site is online now on{" "}
+                          vercel for deployment. It is so easy to use. Site is
+                          online now on{" "}
                           <Link href="/">
                             <a
                               target="_blank"
@@ -317,11 +317,10 @@ const Resume = () => {
                           contact form. I use netlify for deployment. It has so
                           many features like collage details, conference
                           details, and contact form. It is fully responsive. It
-                          is so easy to use. Site is online now on<Link href="https://statuesque-moxie-abc30a.netlify.app/">
-                            <a
-                              target="_blank"
-                              className="ml-2 text-sky-500"
-                            >https://statuesque-moxie-abc30a.netlify.app/
+                          is so easy to use. Site is online now on
+                          <Link href="https://statuesque-moxie-abc30a.netlify.app/">
+                            <a target="_blank" className="ml-2 text-sky-500">
+                              https://statuesque-moxie-abc30a.netlify.app/
                             </a>
                           </Link>
                         </p>
@@ -341,7 +340,11 @@ const Resume = () => {
                           Research
                         </span>
                         <p className="resume__experience__description">
-                          I made this website as a social app. I used React, Next.js, Sass, Tailwind CSS for frontend and Laravel, PostgreSQL and Redis for backend. This project is for collage submittion. I made this website with my small team and we got 1st prize in collage. 
+                          I made this website as a social app. I used React,
+                          Next.js, Sass, Tailwind CSS for frontend and Laravel,
+                          PostgreSQL and Redis for backend. This project is for
+                          collage submittion. I made this website with my small
+                          team and we got 1st prize in collage.
                         </p>
                       </div>
                     </div>
@@ -356,38 +359,65 @@ const Resume = () => {
                     <div className="resume__certificate__content">
                       <h3 className="resume__certificate__title">
                         {" "}
-                        Microsoft Certified Professional - Web Developer
+                        HackerRank Certified - Database (Basic & Advanced)
                       </h3>
-                      <p className="resume__certificate__description">
-                        Microsoft Certified Professional - Web Developer - MCPWD
-                        - 1 - 2019 - Microsoft Corporation - Redmond, WA - USA -
-                        Microsoft Corporation for the exprience of my web
-                        development skills
-                      </p>
+                      <div className="resume__certificate__description">
+                        HackerRank is the technology hiring platform that helps
+                        developers to get certificates. I got basic,
+                        intermediate & advanced certificates in database.
+                        <ol className="style_2">
+                          <li>
+                            <Link href="https://www.hackerrank.com/certificates/120b2c2248e2"><a target="_blank">HackerRank - SQL Basic</a></Link>
+                          </li>
+                          <li>
+                            <Link href="https://www.hackerrank.com/certificates/8dbfa216f123"><a target="_blank">HackerRank - SQL Intermidate</a></Link>
+                          </li>
+                        </ol>
+                      </div>
                     </div>
                     <div className="resume__certificate__content">
                       <h3 className="resume__certificate__title">
                         {" "}
-                        Microsoft Certified Professional - Web Developer
+                        HackerRank Certified - JavaScript (Basic & Advanced)
                       </h3>
-                      <p className="resume__certificate__description">
-                        Microsoft Certified Professional - Web Developer - MCPWD
-                        - 1 - 2019 - Microsoft Corporation - Redmond, WA - USA -
-                        Microsoft Corporation for the exprience of my web
-                        development skills
-                      </p>
+                      <div className="resume__certificate__descridivtion">
+                        I got basic, intermediate & advanced certificates in
+                        javascript. I solve many js concepts problems like
+                        array, string, object, etc.
+                        <ol className="style_2">
+                          <li>
+                            <Link href="https://www.hackerrank.com/certificates/de1c508f013b"><a target="_blank">HackerRank - JavaScript Basic</a></Link>
+                          </li>
+                          <li>
+                            <Link href="https://www.hackerrank.com/certificates/176a88555f05"><a target="_blank">HackerRank - JavaScript Intermidate</a></Link>
+                          </li>
+                        </ol>
+                      </div>
                     </div>
                     <div className="resume__certificate__content">
                       <h3 className="resume__certificate__title">
                         {" "}
-                        Microsoft Certified Professional - Web Developer
+                        Kaggle & LinkedIn & HackerRank & Study Section - Python
                       </h3>
-                      <p className="resume__certificate__description">
-                        Microsoft Certified Professional - Web Developer - MCPWD
-                        - 1 - 2019 - Microsoft Corporation - Redmond, WA - USA -
-                        Microsoft Corporation for the exprience of my web
-                        development skills
-                      </p>
+                      <div className="resume__certificate__description">
+                        I got certificates in python on kaggle, linkedin, study section and
+                        hacker rank for solving many python problems. I have a
+                        great practices in python.
+                        <ol className="style_2">
+                          <li>
+                            <Link href="https://www.linkedin.com/learning/certificates/8ea30dce67c429b4f3a61092f29b57898002211df1114e214d3c52a1e5584c00?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_shares%3Bt0k91ZPfQ9uwADKA26Zrxg%3D%3D"><a target="_blank">LinkedIn - Python</a></Link>
+                          </li>
+                          <li>
+                            <Link href="https://www.hackerrank.com/certificates/00c704a00b03"><a target="_blank">HackerRank - Python</a></Link>
+                          </li>
+                          <li>
+                            <Link href="https://www.linkedin.com/posts/ravi-kishan-62ab51221_ive-completed-the-python-course-on-kaggle-activity-6920311115713249280-ZU20?utm_source=share&utm_medium=member_desktop"><a target="_blank">Kaggle - Python</a></Link>
+                          </li>
+                          <li>
+                            <Link href="https://www.linkedin.com/posts/ravi-kishan-62ab51221_python-certification-activity-6947911258880770049-y5Lb?utm_source=share&utm_medium=member_desktop"><a target="_blank">Study Section - Python</a></Link>
+                          </li>
+                        </ol>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -435,6 +465,7 @@ const Resume = () => {
                       </h2>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="python"
@@ -444,6 +475,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="javascript"
@@ -453,6 +485,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="java"
@@ -462,6 +495,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="php"
@@ -471,6 +505,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="typescript"
@@ -480,6 +515,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="c#"
@@ -489,6 +525,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="c++"
@@ -502,6 +539,7 @@ const Resume = () => {
                       <h2 className="mb-3">Frontend</h2>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="react"
@@ -511,6 +549,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="next js"
@@ -520,6 +559,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="redux"
@@ -529,6 +569,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="sass"
@@ -538,6 +579,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="tailwindcss"
@@ -547,6 +589,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="jquery"
@@ -556,6 +599,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="wordpress"
@@ -568,6 +612,7 @@ const Resume = () => {
                       <h2 className="mb-3">Backend</h2>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="express"
@@ -577,6 +622,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="django"
@@ -586,6 +632,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="flask"
@@ -595,6 +642,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="laravel"
@@ -604,6 +652,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="mysql"
@@ -613,6 +662,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="postgresql"
@@ -622,6 +672,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="graphql"
@@ -638,6 +689,7 @@ const Resume = () => {
                       </h2>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="flutter"
@@ -647,6 +699,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="java android"
@@ -656,6 +709,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="kotlin android"
@@ -665,6 +719,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="react native"
@@ -674,6 +729,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="ionic"
@@ -683,6 +739,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt=".net core"
@@ -692,6 +749,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="electron"
@@ -704,6 +762,7 @@ const Resume = () => {
                       <h2 className="mb-3">Others</h2>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="git"
@@ -713,6 +772,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="github"
@@ -722,6 +782,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="docker"
@@ -731,6 +792,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="kubernetes"
@@ -740,6 +802,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="vscode"
@@ -749,6 +812,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="bash"
@@ -758,6 +822,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="markdown"
@@ -767,6 +832,7 @@ const Resume = () => {
                       </li>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="ubuntu"
@@ -774,8 +840,12 @@ const Resume = () => {
                         />
                         <span className="ml-2">Ubuntu</span>
                       </li>
+                    </ul>
+                    <ul className="resume__skills__data">
+                      <h2 className="mb-3">Learning Now</h2>
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="data science"
@@ -783,14 +853,36 @@ const Resume = () => {
                         />
                         <span className="ml-2">Data Science</span>
                       </li>
+                      
                       <li className="resume__skills__name">
                         <Image
+                        className="resume__skills__img"
                           width={30}
                           height={30}
                           alt="data science"
                           src="https://hackr.io/tutorials/machine-learning-ml/logo-machine-learning-ml.svg"
                         />
                         <span className="ml-2">Machine Learning</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                        className="resume__skills__img"
+                          width={30}
+                          height={30}
+                          alt="deep learning"
+                          src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png"
+                        />
+                        <span className="ml-2">Deep Learning</span>
+                      </li>
+                      <li className="resume__skills__name">
+                        <Image
+                        className="resume__skills__img"
+                          width={30}
+                          height={30}
+                          alt="cloud computing"
+                          src="https://cdn-icons-png.flaticon.com/512/356/356490.png"
+                        />
+                        <span className="ml-2">Cloud Computing</span>
                       </li>
                     </ul>
                   </div>
@@ -822,7 +914,8 @@ export default Resume;
 //     let pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
 //     var pdfWidth = pdf.internal.pageSize.getWidth();
 //     var pdfHeight = pdf.internal.pageSize.getHeight();
-//     pdf.addImage(contentDataURL, 'PNG',  pdfWidth, pdfHeight);
+//     pdf.addImage
+// (contentDataURL, 'PNG',  pdfWidth, pdfHeight);
 //     //  pdf.save('new-file.pdf');
 //     window.open(pdf.output('bloburl', { filename: 'new-file.pdf' }), '_blank');
 //   });

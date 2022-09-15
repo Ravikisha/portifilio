@@ -233,6 +233,14 @@
       align-items: center;
       margin-bottom: $mb-3;
     }
+    // &__img{
+    //   &::before{
+    //     content: "";
+    //     background: #000;
+    //     width: 40px;
+    //     height: 40px;
+    //   }
+    // }
     &__circle {
       display: inline-block;
       width: 5px;
