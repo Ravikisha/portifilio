@@ -1,6 +1,6 @@
 import React from 'react'
-import Man from '../assets/man.png'
-import Curve from '../assets/curve.png'
+import Man from '../public/assets/man.png'
+import Curve from '../public/assets/curve.png'
 import Image from 'next/image';
 import Link from 'next/link';
 const WorkerSection = () => {

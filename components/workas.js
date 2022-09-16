@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import About1 from '../assets/about01.png';
-import About2 from '../assets/about02.png';
-import About3 from '../assets/about03.png';
-import About4 from '../assets/about04.png';
+import About1 from '../public/assets/about01.png';
+import About2 from '../public/assets/about02.png';
+import About3 from '../public/assets/about03.png';
+import About4 from '../public/assets/about04.png';
 
 
 const WorkAs = () => {

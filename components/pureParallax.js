@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from "react";
-import Img1 from '../assets/1.png';
-import Img2 from '../assets/2.png';
-import Img3 from '../assets/3.png';
-import Img4 from '../assets/4.png';
-import Img5 from '../assets/5.png';
-import Img6 from '../assets/6.png';
-import Img7 from '../assets/7.png';
-import Img8 from '../assets/8.png';
-import Img9 from '../assets/9.png';
+import Img1 from '../public/assets/1.png';
+import Img2 from '../public/assets/2.png';
+import Img3 from '../public/assets/3.png';
+import Img4 from '../public/assets/4.png';
+import Img5 from '../public/assets/5.png';
+import Img6 from '../public/assets/6.png';
+import Img7 from '../public/assets/7.png';
+import Img8 from '../public/assets/8.png';
+import Img9 from '../public/assets/9.png';
 
 const PureParallax = () => {
     const [clientXval,setClientXval] = useState(0);
