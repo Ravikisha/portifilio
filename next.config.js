@@ -6,7 +6,7 @@ const nextConfig = {
     path: ""
   },
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/portifilio',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '/portifilio',
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
   reactStrictMode: true,
   swcMinify: true,
 };
