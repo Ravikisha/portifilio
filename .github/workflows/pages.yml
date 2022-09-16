@@ -109,8 +109,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # env:
-    #   NEXT_PUBLIC_BASE_PATH: /portifilio
+    env:
+      NEXT_PUBLIC_BASE_PATH: /portifilio
 
 
     strategy:
