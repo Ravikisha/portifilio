@@ -29,7 +29,7 @@ const Light = () => {
                 objectFit="contain"
                 width={200}
                 height={100}
-                src={prefix + LightImg}
+                src={prefix + LightImg.src}
                 alt="light"
               />
             </div>
