@@ -13,27 +13,29 @@ const Light = () => {
     <>
       <div className="light__hero">
         <div className="light__lamp__container">
-          <div className="light__lamp__lamp-image">
-            <Image
-              layout={"responsive"}
-              width={200}
-              height={300}
-              objectFit="contain"
+          {/* <div className="light__lamp__lamp-image"> */}
+            <img
+              // layout={"responsive"}
+              // width={200}
+              // height={300}
+              // objectFit="contain"
+              className="light__lamp__lamp-image"
               src={"../public/assets/lamp.png"}
               alt="lamp"
             />
-          </div>
+          {/* </div> */}
           {checked && (
-            <div className="light__lamp__light-image">
-              <Image
-                layout={"responsive"}
-                objectFit="contain"
-                width={200}
-                height={100}
+            // <div className="light__lamp__light-image">
+              <img
+                // layout={"responsive"}
+                // objectFit="contain"
+                // width={200}
+                // height={100}
                 src={"../public/assets/light.png"}
                 alt="light"
+                className="light__lamp__light-image"
               />
-            </div>
+            // </div>
           )}
         </div>
         <div className="light__text__container">
