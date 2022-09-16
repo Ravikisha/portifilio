@@ -1,5 +1,5 @@
 import React from "react";
-import Scroll from '../assets/scroll.svg'
+import Scroll from '../public/assets/scroll.svg'
 import Image from 'next/image'
 
 const ScrollDown = () => {

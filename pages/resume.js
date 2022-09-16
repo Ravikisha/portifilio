@@ -1,6 +1,6 @@
 import React from "react";
 import jsPDF from "jspdf";
-import Myphoto from "../assets/me1edit.jpg";
+import Myphoto from "../public/assets/me1edit.jpg";
 import html2canvas from "html2canvas";
 import Head from "next/head";
 import Image from "next/image";
