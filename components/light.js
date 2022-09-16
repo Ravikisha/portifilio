@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import LampImg from "../assets/lamp.png";
-import LampImg from "../public/assets/lamp.png";
+// import LampImg from "../public/assets/lamp.png";
 import LightImg from "../public/assets/light.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const Light = () => {
               width={200}
               height={300}
               objectFit="contain"
-              src={LampImg.src}
+              src={"../public/assets/lamp.png"}
               alt="lamp"
             />
           </div>
@@ -30,7 +30,7 @@ const Light = () => {
                 objectFit="contain"
                 width={200}
                 height={100}
-                src={LightImg.src}
+                src={"../public/assets/light.png"}
                 alt="light"
               />
             </div>

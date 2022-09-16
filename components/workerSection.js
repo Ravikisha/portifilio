@@ -1,6 +1,6 @@
 import React from 'react'
 import Man from '../public/assets/man.png'
-import Curve from '../public/assets/curve.png'
+// import Curve from '../public/assets/curve.png'
 import Image from 'next/image';
 import Link from 'next/link';
 const WorkerSection = () => {
@@ -8,7 +8,7 @@ const WorkerSection = () => {
     <>
     <section className="worker">
       <div className="curve__wave">
-        <Image src={Curve.src} alt="waves" width={500} height={500} objectFit="cover"/>
+        <Image src={'../public/assets/curve.png'} alt="waves" width={500} height={500} objectFit="cover"/>
         </div>
         <div className="worker__contentBx">
             <h2>Work With Me</h2>
