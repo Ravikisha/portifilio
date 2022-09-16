@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 // import {prefix} from './prefix';
 
-const prefix = '/portifilio';
+// const prefix = '/portifilio/';
 const Light = () => {
   const [checked, setChecked] = useState(true);
   return (
@@ -18,7 +18,7 @@ const Light = () => {
               width={200}
               height={300}
               objectFit="contain"
-              src={prefix + LampImg}
+              src={LampImg.src}
               alt="lamp"
             />
           </div>
@@ -29,7 +29,7 @@ const Light = () => {
                 objectFit="contain"
                 width={200}
                 height={100}
-                src={prefix + LightImg.src}
+                src={LightImg.src}
                 alt="light"
               />
             </div>
