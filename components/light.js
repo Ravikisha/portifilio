@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import LampImg from "../assets/lamp.png";
-import LightImg from "../assets/light.png";
+// import LampImg from "../assets/lamp.png";
+import LampImg from "../public/assets/lamp.png";
+import LightImg from "../public/assets/light.png";
 import Image from "next/image";
 import Link from "next/link";
 // import {prefix} from './prefix';
