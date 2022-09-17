@@ -72,11 +72,11 @@ const ProjectReference = () => {
     <section className="bg-yellow-50 overflow-hidden">
         <div className="flex flex-col lg:flex-row lg:items-stretch lg:min-h-[800px]">
             <div className="relative flex items-center justify-center w-full lg:order-2 lg:w-7/12">
-                <div className="absolute bottom-0 right-0 hidden lg:block">
+                <div className="absolute bottom-0 right-0 hidden lg:block" data-aos="fade-right" data-aos-delay="300">
                     <img className="object-contain w-auto h-48" src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/3/curved-lines.png" alt="" />
                 </div>
 
-                <div className="relative px-4 pt-24 pb-16 text-center sm:px-6 md:px-24 2xl:px-32 lg:py-24 lg:text-left">
+                <div className="relative px-4 pt-24 pb-16 text-center sm:px-6 md:px-24 2xl:px-32 lg:py-24 lg:text-left" data-aos="zoom-in-up">
                     <h1 className="text-4xl font-bold text-black sm:text-6xl xl:text-8xl">
                     I Build That You Always <span className="underline decoration-wavy text-indigo-600 decoration-sky-500">Love</span>
                     </h1>
@@ -133,7 +133,7 @@ const ProjectReference = () => {
             </div>
 
             <div className="relative w-full overflow-hidden lg:order-1 h-96 lg:h-auto lg:w-5/12">
-                <div className="absolute inset-0">
+                <div className="absolute inset-0" data-aos="zoom-in">
                     <Image layout='fill' objectFit='cover' className="object-cover w-full h-full scale-150" src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/3/man-working-on-laptop.jpg" alt="" />
                 </div>
 

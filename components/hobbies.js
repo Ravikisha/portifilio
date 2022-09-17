@@ -4,12 +4,12 @@ import Image from 'next/image';
 const Hobbies = () => {
   return (
     <>
-      <h2 className="p-10 text-5xl font-bold text-center text-white bg-sky-500" id="hobbies">
+      <h2 className="p-10 text-5xl font-bold text-center text-white bg-sky-500" id="hobbies" data-aos="fade-down">
           Hobbies
         </h2>
-      <div className="hobbies__page min-h-screen mx-auto py-10 relative">
+      <div className="hobbies__page min-h-screen mx-auto py-10 relative" data-aos="fade-down">
         <div className="hobbies__page__container w-full">
-          <div className="hobbies__page__card rounded-xl">
+          <div className="hobbies__page__card rounded-xl" data-aos="flip-up" data-aos-delay="100">
             <div className="hobbies__page__card__img">
               <Image
                 src="https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80"
@@ -30,7 +30,7 @@ const Hobbies = () => {
               </div>
             </div>
           </div>
-          <div className="hobbies__page__card rounded-xl">
+          <div className="hobbies__page__card rounded-xl" data-aos="flip-up" data-aos-delay="125">
             <div className="hobbies__page__card__img">
               <Image
                 src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
@@ -48,7 +48,7 @@ const Hobbies = () => {
               </div>
             </div>
           </div>
-          <div className="hobbies__page__card rounded-xl">
+          <div className="hobbies__page__card rounded-xl" data-aos="flip-up" data-aos-delay="150">
             <div className="hobbies__page__card__img">
               <Image
                 src="https://images.unsplash.com/photo-1618519764140-d3cdc6496de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
@@ -66,7 +66,7 @@ const Hobbies = () => {
               </div>
             </div>
           </div>
-          <div className="hobbies__page__card rounded-xl">
+          <div className="hobbies__page__card rounded-xl" data-aos="flip-up" data-aos-delay="175">
             <div className="hobbies__page__card__img">
               <Image
                 src="https://images.unsplash.com/photo-1624825602528-2ac658281cd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
@@ -84,7 +84,7 @@ const Hobbies = () => {
               </div>
             </div>
           </div>
-          <div className="hobbies__page__card rounded-xl">
+          <div className="hobbies__page__card rounded-xl" data-aos="flip-up" data-aos-delay="200">
             <div className="hobbies__page__card__img">
               <Image
                 src="https://images.unsplash.com/photo-1560831340-b9679dc9e9f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -102,7 +102,7 @@ const Hobbies = () => {
               </div>
             </div>
           </div>
-          <div className="hobbies__page__card rounded-xl">
+          <div className="hobbies__page__card rounded-xl" data-aos="flip-up" data-aos-delay="225">
             <div className="hobbies__page__card__img">
               <Image
                 src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"

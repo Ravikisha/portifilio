@@ -3,8 +3,8 @@ import React from "react";
 const Articles = () => {
   return (
     <>
-      <div className="articles" id="articles">
-        <div className="bl_wrapper">
+      <div className="articles" id="articles" data-aos="fade-up">
+        <div className="bl_wrapper" data-aos="zoom-in-down" data-aos-delay="200">
           <svg
             id="svg_tramp"
             xmlns="http://www.w3.org/2000/svg"

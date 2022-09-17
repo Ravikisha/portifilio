@@ -3,7 +3,7 @@ import React from "react";
 const Projects = () => {
   return (
     <>
-      <div className="projects" id="projects">
+      <div className="projects" id="projects" data-aos="fade-up">
         <div className="fon">
           <div className="horizon">
             <div></div>
@@ -27,7 +27,7 @@ const Projects = () => {
 
           <span className="not-found">Projects - Not Found</span>
           <span className="page-404">ERROR 404</span>
-          <div className="moon-sky"></div>
+          <div className="moon-sky" data-aos="zoom-in-up" data-aos-delay="200"></div>
           <div className="satellite">☄</div>
           <div className="meteores">
             <div></div>

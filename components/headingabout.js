@@ -20,7 +20,7 @@ const HeadingAbout = () => {
   }, []);
   return (
     <>
-      <div className={show ? "main__about active__mod" : "main__about"} onClick={clickHandler}>
+      <div className={show ? "main__about active__mod" : "main__about"} onClick={clickHandler} data-aos="zoom-in">
         <h2 className="h2__mod">About</h2>
          <video className="about__video" autoPlay loop muted>
           <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-holding-a-coffee-cup-1726-large.mp4" />

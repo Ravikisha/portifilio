@@ -32,7 +32,7 @@ const PureParallax = () => {
     // console.log(clientXval,clientYval);
   return (
     <>
-      <div className="parallax">
+      <div className="parallax" data-aos="fade-up" data-aos-delay="200">
         <div className="parallax__container">
           <h2 className="object" data-value="3" style={{transform: imgMoved(3)}}>
             SKILLS

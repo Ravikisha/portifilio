@@ -43,7 +43,7 @@ const ContactForm = () => {
         <section className="contact__section">
           {/* <span className="mybefore"></span>
         <span className="myafter"></span> */}
-          <form className="contact__container" onSubmit={submitHandler}>
+          <form className="contact__container" onSubmit={submitHandler}  data-aos="flip-up">
             <h2>Contact To Me</h2>
             <div className="contact__row100" >
               <div className="contact__col">

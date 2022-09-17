@@ -19,6 +19,7 @@
     "@splinetool/react-spline": "^2.2.1",
     "@splinetool/runtime": "^0.9.105",
     "@tanem/react-nprogress": "^5.0.12",
+    "aos": "^3.0.0-beta.6",
     "firebase": "^9.9.4",
     "framer-motion": "^7.2.1",
     "html2canvas": "^1.4.1",
@@ -29,6 +30,7 @@
     "react-icons": "^4.4.0",
     "sass": "^1.54.5",
     "styled-components": "^5.3.5",
+    "tailwindcss-animation-delay": "^1.0.7",
     "three": "^0.142.0",
     "vanilla-tilt": "^1.7.2",
     "zustand": "^4.1.1"

@@ -8,7 +8,7 @@ const Qualification = () => {
   };
   return (
     <>
-      <section className="qualification section p-4" id="qualification">
+      <section className="qualification section p-4" id="qualification" data-aos="fade-in" data-aos-delay="100">
         <h2 className="section__title text-4xl md:text-5xl font-bold text-center text-gray-800 mb-10 ">
           Qualification
         </h2>
@@ -42,14 +42,14 @@ const Qualification = () => {
         </div>  
         <div className="qualification__sections">
           <div className={toggleQualification === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
-            <div className="qualification__data">
+            <div className="qualification__data" data-aos="zoom-in-up" data-aos-delay="100">
               <div>
-                <h3 className="qualification__title">Matriculation</h3>
+                <h3 className="qualification__title">BCA</h3>
                 <span className="qualification__subtitle">
-                  BSEB - Patna
+                  Prestige Institute of Management & Research - Gwalior
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 2018 - 2019
+                  <i className="uil uil-calendar-alt"></i> 2021 - Present
                 </div>
               </div>
               <div>
@@ -58,7 +58,7 @@ const Qualification = () => {
               </div>
             </div>
 
-            <div className="qualification__data">
+            <div className="qualification__data" data-aos="zoom-in-up" data-aos-delay="125">
               <div></div>
               <div>
                 <span className="qualification__rounded"></span>
@@ -74,14 +74,14 @@ const Qualification = () => {
                 </div>
               </div>
             </div>
-            <div className="qualification__data">
+            <div className="qualification__data" data-aos="zoom-in-up" data-aos-delay="150">
               <div>
-                <h3 className="qualification__title">BCA</h3>
+                <h3 className="qualification__title">Matriculation</h3>
                 <span className="qualification__subtitle">
-                  Prestige Institute of Management & Research - Gwalior
+                  BSEB - Patna
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 2021 - Present
+                  <i className="uil uil-calendar-alt"></i> 2018 - 2019
                 </div>
               </div>
               <div>

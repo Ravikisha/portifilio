@@ -6,11 +6,11 @@ import Link from 'next/link';
 const WorkerSection = () => {
   return (
     <>
-    <section className="worker">
-      <div className="curve__wave">
+    <section className="worker" data-aos="fade-up">
+      <div className="curve__wave" >
         <Image src={Curve.src} alt="waves" width={500} height={500} objectFit="cover"/>
         </div>
-        <div className="worker__contentBx">
+        <div className="worker__contentBx" data-aos="zoom-in-down">
             <h2>Work With Me</h2>
             <p>I am currently working on full stack development and machine learning technologies. I am great on working in team and community. You have choice to select me that am i able to serve your esteemed company.</p>
             <Link  href="/resume">
@@ -20,7 +20,7 @@ const WorkerSection = () => {
               </div>
               </Link>
         </div>
-        <div className="worker__imgBx">
+        <div className="worker__imgBx" data-aos="fade-up" data-aos-delay="200">
           <div className="img__man">
             <Image src={Man.src} alt="img__man" width={500} height={500} objectFit='cover' />
           </div>

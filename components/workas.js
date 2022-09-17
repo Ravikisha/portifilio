@@ -9,12 +9,12 @@ import About4 from '../public/assets/about04.png';
 const WorkAs = () => {
   return (
     <>
-    <h2 className="p-10 text-5xl font-bold text-center text-black bg-[#f5f5f5]">
+    <h2 className="p-10 text-5xl font-bold text-center text-black bg-[#f5f5f5]" data-aos="fade-in" data-aos-delay="100">
           I can <span className="text-purple-500">be a</span>
     </h2>
-    <div className="workas">
+    <div className="workas" data-aos="fade-in" data-aos-delay="100">
       <div className="workas__container">
-        <div className="workas__card">
+        <div className="workas__card" data-aos="fade-up" data-aos-delay="200">
           <div className="workas__imgBox">
             <div className="workas__img">
             <Image src={About1} alt="workas" layout={'fill'} objectFit='cover' />
@@ -29,7 +29,7 @@ const WorkAs = () => {
             </div>
           </div>
         </div>
-        <div className="workas__card">
+        <div className="workas__card" data-aos="fade-down" data-aos-delay="250">
           <div className="workas__imgBox">
             <Image layout={'fill'} objectFit='cover' src={About2} alt="workas" className="workas__img" />
           </div>
@@ -42,7 +42,7 @@ const WorkAs = () => {
             </div>
           </div>
         </div>
-        <div className="workas__card">
+        <div className="workas__card" data-aos="fade-up" data-aos-delay="300">
           <div className="workas__imgBox">
           <div className="workas__img">
             <Image src={About3} alt="workas" layout={'fill'} objectFit='cover' />
@@ -57,7 +57,7 @@ const WorkAs = () => {
             </div>
           </div>
         </div>
-        <div className="workas__card">
+        <div className="workas__card" data-aos="fade-down" data-aos-delay="350">
           <div className="workas__imgBox">
           <div className="workas__img">
             <Image src={About4} alt="workas" layout={'fill'} objectFit='cover' />

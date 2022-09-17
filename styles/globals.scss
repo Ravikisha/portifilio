@@ -68,6 +68,10 @@ body {
   margin: 0;
 }
 
+// *{
+//   outline: 2px solid red;
+// }
+
 html {
   scroll-behavior: smooth;
 }
@@ -158,66 +162,3 @@ button {
 @tailwind components;
 @tailwind utilities;
 
-//wasted
-
-// .app__navigation {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-
-//   padding: 1rem;
-
-//   .app__navigation-dot {
-//     width: 10px;
-//     height: 10px;
-//     border-radius: 50%;
-//     background-color: #cbcbcb;
-//     margin: 0.5rem;
-
-//     transition: background-color 0.2s ease-in-out;
-
-//     &:hover {
-//       background-color: var(--secondary-color);
-//     }
-
-//     @media screen and (min-width: 2000px) {
-//       width: 20px;
-//       height: 20px;
-//     }
-//   }
-// }
-
-// @media screen and (max-width: 500px) {
-//   .app__navigation{
-//     display: none;
-//   }
-
-//   .copyright {
-//     padding: 2rem;
-//   }
-// }
-
-// .app__container {
-//   width: 100%;
-//   min-height: 100vh;
-
-//   display: flex;
-//   flex-direction: row;
-// }
-// .app__flex {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .app__wrapper {
-//   flex: 1;
-//   width: 100%;
-//   flex-direction: column;
-//   padding: 4rem 2rem;
-
-//   @media screen and (max-width: 450px) {
-//     padding: 4rem 1rem 2rem;
-//   }
-// }

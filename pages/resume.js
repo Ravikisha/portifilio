@@ -39,7 +39,7 @@ const Resume = () => {
           darkTheme ? "dark-theme main__div " : "light-theme main__div"
         }`}
       >
-        <div className="resume" id="resume">
+        <div className="resume" id="resume" data-aos="fade-up">
           <main className="l-main bd-container">
             <div className="resume__container">
               <div className="resume__left">

@@ -74,12 +74,13 @@ const Strength = () => {
       <div
         className="container min-h-2/3 max-w-screen-xl mx-auto py-10 px-7 md:px-16"
         id="overview"
+        data-aos="fade-down"
       >
         <h2 className="text-5xl font-bold text-center text-gray-800 mb-10 ">
           Strength & <span className="text-sky-500">Weakness</span>
         </h2>
-        <div className="flex items-center flex-wrap mb-20  relatve">
-          <div className="w-full md:w-1/2 p-5 bg-black text-white h-full flex justify-center flex-col relative">
+        <div className="flex items-center flex-wrap mb-20 relatve">
+          <div className="w-full md:w-1/2 p-5 bg-black text-white h-full flex justify-center flex-col relative" data-aos="flip-left" data-aos-delay="100">
             <h4 className="text-2xl md:text-3xl text-white font-bold mb-3">
               Strength
             </h4>
@@ -134,8 +135,8 @@ const Strength = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/2 p-5 h-full flex justify-center flex-col relative">
-            <h4 className="text-2xl md:text-3xl text-gray-800 font-bold mb-3 ">
+          <div className="w-full md:w-1/2 p-5 h-full flex justify-center flex-col relative" data-aos="flip-right" data-aos-delay="150">
+            <h4 className="text-2xl md:text-3xl text-gray-800 font-bold mb-3 " >
               Weakness
             </h4>
             <div className="mb-8 text-sm md:text-md">

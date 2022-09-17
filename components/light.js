@@ -12,7 +12,7 @@ const Light = () => {
   return (
     <>
       <div className="light__hero">
-        <div className="light__lamp__container">
+        <div className="light__lamp__container" data-aos="fade-up-right" >
           <div className="light__lamp__lamp-image">
             <Image
               layout={"responsive"}
@@ -36,7 +36,7 @@ const Light = () => {
             </div>
           )}
         </div>
-        <div className="light__text__container">
+        <div className="light__text__container" data-aos="fade-up-left">
           <h1>About Me</h1>
           <p>
             I am a multipurpose developer with many characteristics and skills
