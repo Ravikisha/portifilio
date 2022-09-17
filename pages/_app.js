@@ -37,8 +37,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
       <meta property="og:title" content="Ravi Kishan:An Introduction" />
 <meta property="og:type" content="portifilio" />
-<meta property="og:image" content={MyImage.src} />
-<meta property="og:url" content="/" />
+<meta property="og:image" content="https://ravikishan.me/pagepreview.png" />
+<meta property="og:url" content="https://ravikishan.me/" />
 <meta name="twitter:card" content="Ravi Kishan:An Introduction" />
 
 <meta property="og:description" content="Ravi Kishan is a full stack developer." />

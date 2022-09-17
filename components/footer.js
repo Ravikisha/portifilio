@@ -92,13 +92,16 @@ const Footer = () => {
                 <li className="c-nav-tool_item">
                   <Link href="/projects#projects" className="c-link">Projects</Link>
                 </li>
+                <li className="c-nav-tool_item">
+                  <Link href="/projects#articles" className="c-link">Articles</Link>
+                </li>
               </ul>
             </nav>
 
           </div>
         </div>
         <div className="layout c-2">
-          <div className="layout_item w-50">
+          {/* <div className="layout_item w-50">
             <ul className="flex">
               <li>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
@@ -131,7 +134,7 @@ const Footer = () => {
                 </svg>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="layout_item w-25">
             <ul className="flex gap-2 mt-2">
               <li>

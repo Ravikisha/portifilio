@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     domains: ["cdn.pixabay.com", "cdn.jsdelivr.net","upload.wikimedia.org","images.unsplash.com","bit.ly","raw.githubusercontent.com","cdn.rareblocks.xyz","4achievers.in","hackr.io","icons.veryicon.com","cdn-icons-png.flaticon.com"],
     loader: "akamai",
-    path: ""
+    path: "/"
   },
   // basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/portifilio',
   // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '/portifilio',

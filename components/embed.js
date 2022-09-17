@@ -2,25 +2,28 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
+import Image from 'next/image';
+import IllLogo from '../public/assets/banner-image.png';
+import Link from 'next/link';
 
-const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
+// const navigation = [
+//   { name: 'Product', href: '#' },
+//   { name: 'Features', href: '#' },
+//   { name: 'Marketplace', href: '#' },
+//   { name: 'Company', href: '#' },
+// ]
 
 export default function Example() {
   return (
     <div className="relative overflow-hidden">
-      <Popover as="header" className="relative">
+      {/* <Popover as="header" className="relative">
         <div className="bg-gray-900 pt-6 p-4">
           <nav className="relative max-w-7xl mx-auto flex items-center justify-between px-6" aria-label="Global">
             <div className="flex items-center flex-1">
               <div className="flex items-center justify-between w-full">
                 <a href="#">
                   <span className="sr-only">Workflow</span>
-                  <img className="w-auto h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="" />
+                  <Image width={70} height={70} objectFit="cover" className="w-auto h-10" src={IllLogo} alt="banner image" />
                 </a>
                 <div className="-mr-2 flex items-center">
                   <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -80,9 +83,9 @@ export default function Example() {
                   ))}
                 </div>
                 <div className="mt-6 px-5">
-                  <a href="#" className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700">
-                    Start free trial
-                  </a>
+                  <Link href="#" className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700">
+                    Hire Me
+                  </Link>
                 </div>
                 <div className="mt-6 px-5">
                   <p className="text-center text-base font-medium text-gray-500">
@@ -96,7 +99,7 @@ export default function Example() {
             </div>
           </Popover.Panel>
         </Transition>
-      </Popover>
+      </Popover> */}
 
       <main>
         <div className="pt-10 bg-gray-900 pt-16">
@@ -104,51 +107,24 @@ export default function Example() {
             <div className="">
               <div className="mx-auto max-w-md px-4 max-w-2xl px-6 text-center">
                 <div className="">
-                  <a href="#" className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 text-base hover:text-gray-200">
+                  <a href="#projects" className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 text-base hover:text-gray-200">
                     <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
-                      We&apos;re hiring
+                      I&apos;m builder
                     </span>
-                    <span className="ml-4 text-sm">Visit our careers page</span>
+                    <span className="ml-4 text-sm">See My Projects</span>
                     <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                   </a>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white mt-5 text-6xl">
-                    <span className="block">A better way to</span>
-                    <span className="block text-indigo-400">ship web apps</span>
+                    <span className="block">Ravi Kishan</span>
+                    <span className="block text-indigo-400">A full-stack developer</span>
                   </h1>
                   <p className="mt-3 text-base text-gray-300 mt-5 text-xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+                  I am a Full Stack Developer with 1+ years of personal
+                    project experience in the development of web applications. I
+                    have worked on various projects using different
+                    technologies. 
                   </p>
-                  <div className="mt-10 mt-12">
-                    <form action="#" className="max-w-xl mx-auto">
-                      <div className="flex">
-                        <div className="min-w-0 flex-1">
-                          <label htmlFor="email" className="sr-only">
-                            Email address
-                          </label>
-                          <input
-                            id="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
-                          />
-                        </div>
-                        <div className="mt-0 ml-3">
-                          <button
-                            type="submit"
-                            className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">
-                            Start free trial
-                          </button>
-                        </div>
-                      </div>
-                      <p className="mt-3 text-sm text-gray-300 mt-4">
-                        Start your free 14-day trial, no credit card necessary. By providing your email, you agree to our{' '}
-                        <a href="#" className="font-medium text-white">
-                          terms of service
-                        </a>
-                        .
-                      </p>
-                    </form>
-                  </div>
+                  
                 </div>
               </div>
               <div className="mt-12 -mb-48">
@@ -176,24 +152,25 @@ export default function Example() {
                     </div>
                     <div className="relative px-4 py-16 px-6 py-24">
                       <h1 className="text-center text-4xl font-extrabold tracking-tight text-5xl">
-                        <span className="block text-white">Take control of your</span>
-                        <span className="block text-indigo-200">customer support</span>
+                        <span className="block text-white">Build your product</span>
+                        <span className="block text-indigo-200">Fast & Interactive</span>
                       </h1>
                       <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 max-w-3xl">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-                        aliqua.
+                      I make websites that serve a purpose and bring value to your users.
+            I also love building accessible, inclusive products. I make building
+            easy and interesting.
                       </p>
                       <div className="mt-10 max-w-sm mx-auto max-w-none flex justify-center">
                         <div className="space-y-0 space-y-0 mx-auto inline-grid grid-cols-2 gap-5">
                           <a
-                            href="#"
+                            href="#projects"
                             className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 px-8">
-                            Get started
+                            See My Projects
                           </a>
                           <a
-                            href="#"
+                            href="#articles"
                             className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 px-8">
-                            Live demo
+                            See My Articles
                           </a>
                         </div>
                       </div>

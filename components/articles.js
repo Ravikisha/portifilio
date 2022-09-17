@@ -3,7 +3,7 @@ import React from "react";
 const Articles = () => {
   return (
     <>
-      <div className="articles">
+      <div className="articles" id="articles">
         <div className="bl_wrapper">
           <svg
             id="svg_tramp"
