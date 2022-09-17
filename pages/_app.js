@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta property="og:title" content="Ravi Kishan:An Introduction" />
-        <meta property="og:type" content="portifilio" />
+        <meta property="og:type" content="Portfolio" />
         <meta
           property="og:image"
           content="https://ravikishan.me/pagepreview.png"
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
           content="Ravi Kishan is a full stack developer."
         />
         <meta property="og:site_name" content="Ravi Kishan:An Introduction" />
-        <meta name="twitter:image:alt" content="Ravi Kishan Portifilio" />
+        <meta name="twitter:image:alt" content="Ravi Kishan Portfolio" />
       </Head>
       <Header />
       <Progress isAnimating={isAnimating} />

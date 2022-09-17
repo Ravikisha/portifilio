@@ -59,22 +59,25 @@ const Resume = () => {
                       </div>
 
                       <h1 className="resume__home__title">
-                        Ravi <b>Kishan</b>
+                        Ravi <span>Kishan</span>
                       </h1>
                       <h3 className="resume__home__profession">
                         Full Stack Developer
                       </h3>
 
-                      {/* <div>
-                        <a
+                      <div>
+                        <div
                           data-html2canvas-ignore
-                          download=""
-                          href="#"
+                          
                           className="resume__home__button__movil"
                         >
+                          <Link 
+                            download
+                            href="/resume.pdf" >
                           Download
-                        </a>
-                      </div> */}
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                     <div className="resune__home__address bd-grid">
                       <span className="resume__home__information">
@@ -272,13 +275,13 @@ const Resume = () => {
                       </div>
                       <div className="resume__experience__data bd-grid">
                         <h3 className="resume__experience__title">
-                          My Portifilio
+                          My Portfolio
                         </h3>
                         <span className="resume__experience__company">
-                          Portifilio Site | Ravi Kishan
+                        Portfolio Site | Ravi Kishan
                         </span>
                         <p className="resume__experience__description">
-                          I made this website as my portifilio. I used React,
+                          I made this website as my portfolio. I used React,
                           Next.js, sass, Tailwind CSS, and Framer Motion for
                           this project. I used Next.js for server side rendering
                           and SEO. I used Framer Motion for animations. I used
