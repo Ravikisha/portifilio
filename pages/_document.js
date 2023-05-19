@@ -25,6 +25,9 @@ export default function Document() {
           rel="stylesheet"
           type="text/css"
         />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#fff" />
+        <link rel="apple-touch-icon" href="favicon.ico" />
       </Head>
       <Script
         id="box-icons"

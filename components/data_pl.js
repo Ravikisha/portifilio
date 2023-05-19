@@ -203,9 +203,33 @@ export const data = [
         ]
     },
     {
+        "name": "symfony",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg",
+        "codelink": "https://www.google.com/search?q=symfony+backend",
+        "tags": [
+            "backend"
+        ]
+    },
+    {
+        "name": "CodeIgniter",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg",
+        "codelink": "https://www.google.com/search?q=codeigniter+backend",
+        "tags": [
+            "backend"
+        ]
+    },
+    {
         "name": "Node Js",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         "codelink": "https://www.google.com/search?q=node+js+backend",
+        "tags": [
+            "backend"
+        ]
+    },
+    {
+        "name": "Nest Js",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+        "codelink": "https://www.google.com/search?q=nest+js+backend",
         "tags": [
             "backend"
         ]

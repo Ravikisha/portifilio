@@ -852,7 +852,7 @@ const Resume = () => {
                           width={30}
                           height={30}
                           alt="data science"
-                          src="https://4achievers.in/frontend/images/data-science-training.svg"
+                          src="https://cdn-icons-png.flaticon.com/512/2821/2821637.png"
                         />
                         <span className="ml-2">Data Science</span>
                       </li>
@@ -862,8 +862,8 @@ const Resume = () => {
                         className="resume__skills__img"
                           width={30}
                           height={30}
-                          alt="data science"
-                          src="https://hackr.io/tutorials/machine-learning-ml/logo-machine-learning-ml.svg"
+                          alt="Machine Learning"
+                          src="https://cdn-icons-png.flaticon.com/512/4616/4616734.png"
                         />
                         <span className="ml-2">Machine Learning</span>
                       </li>
