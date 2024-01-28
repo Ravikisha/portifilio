@@ -10,7 +10,7 @@ const Filter = ({popular,setFiltered,activeFilter,setActiveFilter}) => {
     },[activeFilter]);
   return (
     <>
-        <div className="flex justify-center align-center my-10 gap-4 flex-wrap">
+        <div className="flex justify-center align-center my-10 gap-4 flex-wrap px-2 md:px-0">
             <button onClick={()=>setActiveFilter('All')} className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500 ${activeFilter === 'All' ? 'bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold' : ''}`}>
                 All
             </button>
