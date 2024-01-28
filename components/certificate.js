@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { AnimatePresence, motion } from "framer-motion";
 import { data } from "./data_cert";
+import * as Dialog from "@radix-ui/react-dialog";
+import { Cross2Icon } from "@radix-ui/react-icons";
+import Image from "next/image";
+import LinkedInLogo from "../public/company/linkedin.png";
+import CertificateLogo from "../public/assets/certificate.jpg";
 
 const Certificate = () => {
   const [cert, setCert] = useState(data);
@@ -29,7 +33,11 @@ const Certificate = () => {
             <div className="PL__content">
               {filterData.map((cert) => {
                 return (
-                  <div key={cert.name} data-aos="zoom-in-up" className="px-4 md:px-0">
+                  <div
+                    key={cert.name}
+                    data-aos="zoom-in-up"
+                    className="px-4 md:px-0"
+                  >
                     <Card cert={cert} />
                   </div>
                 );
@@ -55,7 +63,7 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
   }, [activeFilter]);
   return (
     <>
-      <div className="flex justify-center align-center my-10 gap-4 flex-wrap">
+      <div className="flex justify-center align-center my-10 gap-4 flex-wrap px-2 md:px-0">
         <button
           onClick={() => setActiveFilter("All")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500 ${
@@ -142,40 +150,76 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
 };
 
 export const Card = (props) => {
-    const {title, description, image, link, linkedin, tags} = props.cert;
+  const { name, organization, description, image, link, linkedin, tags } =
+    props.cert;
   return (
-    <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-      <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
-        <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
-          alt="ui/ux review check"
-        />
-      </div>
-      <div className="p-6">
-        <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            {title}
-        </h4>
-        <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700 overflow-auto">
-            {description}
-        </p>
-      </div>
-      <div className="flex items-center justify-between p-6">
-        <div className="flex items-center -space-x-3">
-          <img
-            alt="natali craig"
-            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1061&amp;q=80"
-            className="relative inline-block h-9 w-9 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
-          />
-          <img
-            alt="Tania Andrew"
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
-            className="relative inline-block h-9 w-9 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
+    <>
+    <Dialog.Root>
+      <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+        <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+          <Image
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
+            alt="ui/ux review check"
+            width={600}
+            height={400}
+            objectFit="contain"
           />
         </div>
-        <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-          January 10
-        </p>
+        <div className="p-4 flex gap-2 flex-col justify-start items-start">
+          <h4 className="block text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+            {name}
+          </h4>
+          <Image src={
+            "/company/" + organization + ".png"
+          } alt={organization} height={50} width={80} objectFit="contain" />
+          <p className="block text-lg antialiased font-normal leading-relaxed text-gray-700 overflow-auto">
+            {description.substring(0, 90)}...
+          </p>
+        </div>
+        <div className="flex items-center justify-between p-4">
+            <a href={linkedin} target="_blank" rel="noreferrer" className="flex items-center">
+              <Image src={LinkedInLogo} alt="linkedin" height={40} width={70} objectFit="contain" />
+            </a>
+            <a href={link} target="_blank" rel="noreferrer" className="flex items-center">
+              <Image src={CertificateLogo} alt="linkedin" height={40} width={70} objectFit="contain" />
+            </a>
+        </div>
+        <Dialog.Trigger asChild>
+          <button className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex items-center justify-center rounded-[4px] bg-white p-4 font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
+            Read More
+          </button>
+        </Dialog.Trigger>
       </div>
-    </div>
+        
+        <Dialog.Portal>
+          <Dialog.Overlay className="bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0" />
+          <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] w-[80vw] md:w-[50vw] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-[9999]">
+            <div className="bg-gray-100 flex rounded-2xl shadow-lg w-full p-5 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-col md:flex-row gap-4">
+              <div className="w-1/2">
+                <img
+                  className="rounded-2xl w-full"
+                  src="https://images.unsplash.com/photo-1616606103915-dea7be788566?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
+                />
+              </div>
+              <div className="md:w-1/2 px-8 md:px-16">
+                <h2 className="font-bold text-2xl text-[#002D74]">Login</h2>
+                <p className="text-xs mt-4 text-[#002D74]">
+                  If you are already a member, easily log in
+                </p>
+              </div>
+
+              <Dialog.Close asChild>
+                <button
+                  className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none border-1 border-black hover:border-violet11"
+                  aria-label="Close"
+                >
+                  <Cross2Icon />
+                </button>
+              </Dialog.Close>
+            </div>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
+    </>
   );
 };
