@@ -12,7 +12,7 @@ const Languages = () => {
     
   return(
     <>
-    <div className="PL__container" data-aos="fade-up" data-aos-delay="100">
+    <div className="PL__container" data-aos="fade-up" data-aos-delay="100" id="PL">
     <h2 className="text-4xl font-bold mb-2 text-center">Skills</h2>
     <h2 className="text-2xl mb-2 text-center">See what i know about <span className="text-sky-500 font-bold text-3xl underline">programming</span></h2>
         <Filter popular={PLData} setFiltered={setFilterData} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>

@@ -13,7 +13,7 @@ const Skills = () => {
       </Head>
       <PureParallax />
       <Languages />
-      <hr className="my-10 border-gray-300 border-2 w-[80%] mx-auto" />
+      <hr className="my-10 border-gray-300 border-2 w-[80%] mx-auto" id="certificate" />
       <Certificate />
     </>
   );
