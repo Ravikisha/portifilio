@@ -319,7 +319,14 @@ export const Card = (props) => {
                     />
                   ))}
                 </div>
+                <h3 className="font-bold text-lg text-[#002D74] mt-3"># Tags</h3>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {tags.map((tag) => (
+                    <span key={tag} className="bg-[#002D74] text-white px-2 py-1 rounded-md text-xs">{tag}</span>
+                  ))}
+                </div>
               </div>
+              
 
               <Dialog.Close asChild>
                 <button
