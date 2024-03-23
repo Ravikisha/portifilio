@@ -77,64 +77,54 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
           All
         </button>
         <button
-          onClick={() => setActiveFilter("PL")}
+          onClick={() => setActiveFilter("academic")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
             activeFilter === "PL"
               ? "bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
         >
-          Programming Language
+          Academic
         </button>
         <button
-          onClick={() => setActiveFilter("frontend")}
+          onClick={() => setActiveFilter("technical")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
             activeFilter === "frontend"
               ? "bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
         >
-          Frontend
+          Technical
         </button>
         <button
-          onClick={() => setActiveFilter("backend")}
+          onClick={() => setActiveFilter("competitions")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
             activeFilter === "backend"
               ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
         >
-          Backend
+          Competitions
         </button>
         <button
-          onClick={() => setActiveFilter("app")}
+          onClick={() => setActiveFilter("experience")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
             activeFilter === "app"
               ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
         >
-          App Developement
+          Experience
         </button>
         <button
-          onClick={() => setActiveFilter("devops")}
+          onClick={() => setActiveFilter("Achievements")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
             activeFilter === "devops"
               ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
         >
-          DevOps
-        </button>
-        <button
-          onClick={() => setActiveFilter("aiml")}
-          className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
-            activeFilter === "aiml"
-              ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
-              : ""
-          }`}
-        >
-          AI/ML/DS
+          Achievements
         </button>
         <button
           onClick={() => setActiveFilter("others")}

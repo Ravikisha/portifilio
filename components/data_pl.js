@@ -6,7 +6,7 @@ export const data = [
         "tags": [
             "PL",
             "frontend"
-        ]
+        ],
     },
     {
         "name": "Python",

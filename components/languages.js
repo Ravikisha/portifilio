@@ -19,7 +19,7 @@ const Languages = () => {
         <motion.div >
             <AnimatePresence>
                 <div className="PL__content">
-            {filterData.map((PL) => {
+            {filterData.filter((PL) => PL.show === undefined || PL.show === true ).map((PL) => {
                 return(
                     <div key={PL.name} data-aos="zoom-in-up">
                         <Card  PL={PL}/>
