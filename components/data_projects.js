@@ -2,14 +2,13 @@
 
 export const data = [
   {
-    name: "Microsoft Certified: Azure Fundamentals",
-    organization: "Microsoft",
+    name: "Python Central Hub",
     description:
-      "This certification is intended for candidates who are just beginning to work with others-based solutions and services or are new to Azure.",
-    image: "mlsa.jpg",
-    link: "https://www.youracclaim.com/badges/0c0b6b5f-7c1a-4f3f-8c7a-3a8b6c3c7f6a",
-    linkedin: "https://www.linkedin.com/in/ravikisha/",
-    tags: ["academic"],
-    skills: ["JavaScript", "Python"],
-  },
+      "Python Central Hub is a platform for Python enthusiasts to learn, share and collaborate.",
+    image: "pythoncentralhub.png",
+    link: "https://pythoncentralhub.com/",
+    linkedin: "https://www.linkedin.com/company/pythoncentralhub/",
+    tags: ["personal"],
+    skills: ["Astro", "Python"]
+  }
 ];

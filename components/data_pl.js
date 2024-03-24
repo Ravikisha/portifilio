@@ -99,6 +99,14 @@ export const data = [
         ]
     },
     {
+        "name": "Astro",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+        "codelink": "https://www.google.com/search?q=astro+frontend",
+        "tags": [
+            "frontend"
+        ]
+    },
+    {
         "name": "Sass",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
         "codelink": "https://www.google.com/search?q=sass+frontend",

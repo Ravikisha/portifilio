@@ -132,14 +132,14 @@ export const Card = (props) => {
     linkedin,
     tags,
     skills,
-  } = props.cert;
+  } = props.project;
   return (
     <>
       <Dialog.Root>
         <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
           <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
             <Image
-              src={"/certificates/" + image}
+              src={"/projects/" + image}
               alt={name + " certificate Ravi Kishan"}
               width={600}
               height={400}
@@ -150,13 +150,6 @@ export const Card = (props) => {
             <h4 className="block text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
               {name}
             </h4>
-            <Image
-              src={"/company/" + organization + ".png"}
-              alt={organization}
-              height={50}
-              width={80}
-              objectFit="contain"
-            />
             <p className="block text-lg antialiased font-normal leading-relaxed text-gray-700 overflow-auto">
               {description.substring(0, 90)}...
             </p>
@@ -210,7 +203,7 @@ export const Card = (props) => {
             </a>
           </div>
           <Dialog.Trigger asChild>
-            <button className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex items-center justify-center rounded-[4px] bg-white p-4 font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
+            <button className="shadow-blackA4 hover:bg-mauve3 inline-flex items-center justify-center rounded-[4px] bg-sky-500 text-white hover:bg-sky-700 p-4 font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
               Read More
             </button>
           </Dialog.Trigger>
@@ -222,8 +215,8 @@ export const Card = (props) => {
             <div className="bg-gray-100 flex rounded-2xl shadow-lg w-full p-5 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-col md:flex-row gap-4">
               <div className="w-1/2">
                 <Image
-                  src={"/certificates/" + image}
-                  alt={name + " certificate Ravi Kishan"}
+                  src={"/projects/" + image}
+                  alt={name + " project Ravi Kishan"}
                   objectFit="contain"
                   width="100%"
                   height="100%"

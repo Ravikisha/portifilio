@@ -229,7 +229,7 @@ export const Card = (props) => {
             </a>
           </div>
           <Dialog.Trigger asChild>
-            <button className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex items-center justify-center rounded-[4px] bg-white p-4 font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
+            <button className="shadow-blackA4 hover:bg-sky-700 inline-flex items-center justify-center rounded-[4px] bg-sky-500 text-white p-4 font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
               Read More
             </button>
           </Dialog.Trigger>
