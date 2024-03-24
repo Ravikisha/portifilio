@@ -79,7 +79,7 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
         <button
           onClick={() => setActiveFilter("academic")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
-            activeFilter === "PL"
+            activeFilter === "academic"
               ? "bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
@@ -89,7 +89,7 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
         <button
           onClick={() => setActiveFilter("technical")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
-            activeFilter === "frontend"
+            activeFilter === "technical"
               ? "bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
@@ -99,7 +99,7 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
         <button
           onClick={() => setActiveFilter("competitions")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
-            activeFilter === "backend"
+            activeFilter === "competitions"
               ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
@@ -109,7 +109,7 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
         <button
           onClick={() => setActiveFilter("experience")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
-            activeFilter === "app"
+            activeFilter === "experience"
               ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}
@@ -117,9 +117,9 @@ const Filter = ({ popular, setFiltered, activeFilter, setActiveFilter }) => {
           Experience
         </button>
         <button
-          onClick={() => setActiveFilter("Achievements")}
+          onClick={() => setActiveFilter("achievements")}
           className={`hover:bg-teal-100 bg-white text-teal-800 rounded-full py-3 px-8 shadow-md hover:shadow-2xl transition duration-500  ${
-            activeFilter === "devops"
+            activeFilter === "achievements"
               ? " bg-black text-gray-100 hover:text-gray-100 hover:bg-black font-bold"
               : ""
           }`}

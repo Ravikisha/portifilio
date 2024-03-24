@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { data } from "./data_cert";
+import { data } from "./data_projects";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import Image from "next/image";
@@ -10,7 +10,7 @@ import { data as data_badge } from "./data_pl";
 import { DownloadIcon } from "lucide-react";
 
 const Projects = () => {
-  const [cert, setCert] = useState(data);
+  const [project, setProject] = useState(data);
   const [filterData, setFilterData] = useState(data);
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -25,7 +25,7 @@ const Projects = () => {
           </span>
         </h2>
         <Filter
-          popular={cert}
+          popular={project}
           setFiltered={setFilterData}
           activeFilter={activeFilter}
           setActiveFilter={setActiveFilter}
@@ -33,14 +33,14 @@ const Projects = () => {
         <motion.div>
           <AnimatePresence>
             <div className="PL__content">
-              {filterData.map((cert) => {
+              {filterData.map((project) => {
                 return (
                   <div
-                    key={cert.name}
+                    key={project.name}
                     data-aos="zoom-in-up"
                     className="px-4 md:px-0"
                   >
-                    <Card cert={cert} />
+                    <Card project={project} />
                   </div>
                 );
               })}
