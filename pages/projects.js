@@ -21,6 +21,7 @@ const Contact = () => {
       </Suspense>
       <Loader />
       <Projects />
+      <hr className="my-5 border-gray-300 border-2 w-[80%] mx-auto" />
       <Articles />
     </>
   );

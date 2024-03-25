@@ -123,7 +123,7 @@ const Resume = () => {
                         ravi-kishan-62ab51221
                       </a>
                     </Link>
-                    <Link href="https://www.instagram.com/ravikishan.69/">
+                    <Link href="https://www.instagram.com/ravikishan.404/">
                       <a target="_blank" className="resume__social__link">
                         <i className="uil uil-instagram resume__social__icon"></i>{" "}
                         @ravikishan.69

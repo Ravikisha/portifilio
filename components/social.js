@@ -5,7 +5,7 @@ const Social = () => {
   return (
     <>
       <div className="home__social">
-        <Link href="https://www.instagram.com/ravikishan.69/" passHref={true}>
+        <Link href="https://www.instagram.com/ravikishan.404/" passHref={true}>
         <a
           target="_blank"
           // rel="noopener noreferrer"

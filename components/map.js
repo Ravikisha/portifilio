@@ -153,7 +153,7 @@ const Map = () => {
                   <i className="fab fa-github"></i>
                 </a>
               </Link>
-              <Link href="https://www.instagram.com/ravikishan.69/">
+              <Link href="https://www.instagram.com/ravikishan.404/">
                 <a className="btn__social ig" target="_blank">
                   <i className="fab fa-instagram"></i>
                 </a>

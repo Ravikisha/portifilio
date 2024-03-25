@@ -138,7 +138,7 @@ const Footer = () => {
           <div className="layout_item w-25">
             <ul className="flex gap-2 mt-2">
               <li>
-                <Link href="https://www.instagram.com/ravikishan.69/">
+                <Link href="https://www.instagram.com/ravikishan.404/">
                   <a target="_blank">
                   <i className="uil uil-instagram-alt text-3xl"></i>
                 </a>
