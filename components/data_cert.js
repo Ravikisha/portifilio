@@ -2,13 +2,13 @@
 
 export const data = [
   {
-    name: "Microsoft Certified: Azure Fundamentals",
-    organization: "Microsoft",
+    name: "Microsoft Student Ambassador",
+    organization: "microsoft",
     description:
-      "This certification is intended for candidates who are just beginning to work with others-based solutions and services or are new to Azure.",
+      "This certification is awarded to students who are passionate about technology and are willing to share their knowledge with others. It is a global program that recognizes student leaders who are committed to empowering their communities by sharing their technical knowledge and experiences with their peers.",
     image: "mlsa.jpg",
-    link: "https://www.youracclaim.com/badges/0c0b6b5f-7c1a-4f3f-8c7a-3a8b6c3c7f6a",
-    linkedin: "https://www.linkedin.com/in/ravikisha/",
+    link: "https://mvp.microsoft.com/studentambassadors/certificate/6794df42-b10b-4ed6-9a8d-0029d0d0f6c3",
+    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_microsoftstudentambassador-betacomplete-empoweringcommunities-activity-7161911263361392640-172W?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["JavaScript", "Python"],
   },
