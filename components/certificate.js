@@ -8,6 +8,7 @@ import LinkedInLogo from "../public/company/linkedin.png";
 import CertificateLogo from "../public/assets/certificate.jpg";
 import { data as data_badge } from "./data_pl";
 import { DownloadIcon } from "lucide-react";
+import {badgeColorGenerator} from "./utils/utils";
 
 const Certificate = () => {
   const [cert, setCert] = useState(data);
@@ -312,7 +313,9 @@ export const Card = (props) => {
                 <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3"># Tags</h3>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {tags.map((tag) => (
-                    <span key={tag} className="bg-[#002D74] text-white px-2 py-1 rounded-md text-xs">{tag}</span>
+                    <span key={tag} className={`text-sm font-medium me-2 px-2.5 py-0.5 rounded ${badgeColorGenerator()}`}>
+                    {tag}
+                  </span>
                   ))}
                 </div>
               </div>
