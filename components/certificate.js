@@ -239,7 +239,7 @@ export const Card = (props) => {
           <Dialog.Overlay className="bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0" />
           <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] w-[80vw] md:w-[50vw] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-[9999]">
             <div className="bg-gray-100 flex rounded-2xl shadow-lg w-full p-5 items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex-col md:flex-row gap-4">
-              <div className="w-1/2">
+              <div className="w-full md:w-1/2 hidden md:block">
                 <Image
                   src={"/certificates/" + image}
                   alt={name + " certificate Ravi Kishan"}
@@ -247,10 +247,10 @@ export const Card = (props) => {
                   width="100%"
                   height="100%"
                   layout="responsive"
-                  className="w-full h-auto rounded-md"
+                  className="w-full rounded-md"
                 />
               </div>
-              <div className="md:w-1/2 px-8 md:px-16">
+              <div className="w-full md:w-1/2 px-2 md:px-16">
                 <Image
                   src={"/company/" + organization + ".png"}
                   alt={organization}
@@ -258,9 +258,9 @@ export const Card = (props) => {
                   width={80}
                   objectFit="contain"
                 />
-                <h2 className="font-bold text-2xl text-[#002D74]">{name}</h2>
-                <p className="text-xs mt-4 text-[#002D74]">{description}</p>
-                <div className="flex items-center justify-between p-4">
+                <h2 className="font-bold text-lg md:text-2xl text-[#002D74]">{name}</h2>
+                <p className="text-xs mt-2 md:mt-4 text-[#002D74]">{description}</p>
+                <div className="flex items-center justify-between p-2 md:p-4">
                   <a
                     href={linkedin}
                     target="_blank"
@@ -290,8 +290,8 @@ export const Card = (props) => {
                     />
                   </a>
                 </div>
-                <h3 className="font-bold text-lg text-[#002D74]"># Skills</h3>
-                <div className="flex flex-wrap gap-2 mt-3">
+                <h3 className="font-bold text-md md:text-lg text-[#002D74]"># Skills</h3>
+                <div className="flex flex-wrap gap-2 mt-1 md:mt-3">
                   {skills.map((skill) => (
                     <Image
                       src={
@@ -309,18 +309,16 @@ export const Card = (props) => {
                     />
                   ))}
                 </div>
-                <h3 className="font-bold text-lg text-[#002D74] mt-3"># Tags</h3>
+                <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3"># Tags</h3>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {tags.map((tag) => (
                     <span key={tag} className="bg-[#002D74] text-white px-2 py-1 rounded-md text-xs">{tag}</span>
                   ))}
                 </div>
               </div>
-              
-
               <Dialog.Close asChild>
                 <button
-                  className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none border-1 border-black hover:border-violet11"
+                  className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none border-1 border-black hover:border-violet11 z-10"
                   aria-label="Close"
                 >
                   <Cross2Icon />
