@@ -17,6 +17,22 @@ export const data = [
         ]
     },
     {
+        "name": "Go",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+        "codelink": "https://www.google.com/search?q=go+programming+language",
+        "tags": [
+            "PL"
+        ]
+    },
+    {
+        "name": "Rust",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
+        "codelink": "https://www.google.com/search?q=rust+programming+language",
+        "tags": [
+            "PL"
+        ]
+    },
+    {
         "name": "Php",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
         "codelink": "https://www.google.com/search?q=php+programming+language",
@@ -140,7 +156,7 @@ export const data = [
     },
     {
         "name": "Tailwind Css",
-        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
         "codelink": "https://www.google.com/search?q=tailwindcss+frontend",
         "tags": [
             "frontend"
@@ -204,7 +220,7 @@ export const data = [
     },
     {
         "name": "Laravel",
-        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
         "codelink": "https://www.google.com/search?q=laravel+backend",
         "tags": [
             "backend"
@@ -236,7 +252,7 @@ export const data = [
     },
     {
         "name": "Nest Js",
-        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
         "codelink": "https://www.google.com/search?q=nest+js+backend",
         "tags": [
             "backend"
@@ -433,7 +449,7 @@ export const data = [
         ]
     },
     {
-        "name": "Terraform (Cloud)",
+        "name": "Terraform",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",
         "codelink": "https://www.google.com/search?q=terraform+cloud",
         "tags": [

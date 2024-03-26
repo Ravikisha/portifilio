@@ -8,7 +8,7 @@ import LinkedInLogo from "../public/company/linkedin.png";
 import CertificateLogo from "../public/assets/certificate.jpg";
 import { data as data_badge } from "./data_pl";
 import { DownloadIcon } from "lucide-react";
-import {badgeColorGenerator} from "./utils/utils";
+import { badgeColorGenerator } from "./utils/utils";
 
 const Certificate = () => {
   const [cert, setCert] = useState(data);
@@ -45,7 +45,6 @@ const Certificate = () => {
                   </div>
                 );
               })}
-              ;
             </div>
           </AnimatePresence>
         </motion.div>
@@ -259,8 +258,12 @@ export const Card = (props) => {
                   width={80}
                   objectFit="contain"
                 />
-                <h2 className="font-bold text-lg md:text-2xl text-[#002D74]">{name}</h2>
-                <p className="text-xs mt-2 md:mt-4 text-[#002D74]">{description}</p>
+                <h2 className="font-bold text-lg md:text-2xl text-[#002D74]">
+                  {name}
+                </h2>
+                <p className="text-xs mt-2 md:mt-4 text-[#002D74]">
+                  {description}
+                </p>
                 <div className="flex items-center justify-between p-2 md:p-4">
                   <a
                     href={linkedin}
@@ -291,7 +294,9 @@ export const Card = (props) => {
                     />
                   </a>
                 </div>
-                <h3 className="font-bold text-md md:text-lg text-[#002D74]"># Skills</h3>
+                <h3 className="font-bold text-md md:text-lg text-[#002D74]">
+                  # Skills
+                </h3>
                 <div className="flex flex-wrap gap-2 mt-1 md:mt-3">
                   {skills.map((skill) => (
                     <Image
@@ -310,12 +315,17 @@ export const Card = (props) => {
                     />
                   ))}
                 </div>
-                <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3"># Tags</h3>
+                <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3">
+                  # Tags
+                </h3>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {tags.map((tag) => (
-                    <span key={tag} className={`text-sm font-medium me-2 px-2.5 py-0.5 rounded ${badgeColorGenerator()}`}>
-                    {tag}
-                  </span>
+                    <span
+                      key={tag}
+                      className={`text-sm font-medium me-2 px-2.5 py-0.5 rounded ${badgeColorGenerator()}`}
+                    >
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -328,12 +338,13 @@ export const Card = (props) => {
                 </button>
               </Dialog.Close>
               <a
-                  className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute bottom-[10px] right-[20px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none border-1 border-black hover:border-violet11 cursor-pointer"
-                  aria-label="Download"
-                  href={"/certificates/" + image} download
-                >
-                  <DownloadIcon />
-                </a>
+                className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute bottom-[10px] right-[20px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none border-1 border-black hover:border-violet11 cursor-pointer"
+                aria-label="Download"
+                href={"/certificates/" + image}
+                download
+              >
+                <DownloadIcon />
+              </a>
             </div>
           </Dialog.Content>
         </Dialog.Portal>
@@ -341,4 +352,3 @@ export const Card = (props) => {
     </>
   );
 };
-
