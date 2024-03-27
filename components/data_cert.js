@@ -21,6 +21,14 @@ export const data = [
     linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_webdevelopment-udemycertificate-coltsteele-activity-7171897874681729024--T8O?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["JavaScript", "HTML", "CSS", "Node Js", "Express Js", "React"]
+  }, {
+    name: "React - The Complete Guide 2024",
+    organization: "udemy",
+    description:
+      "This certification is awarded to students who have completed the React - The Complete Guide 2024 course on Udemy. The course covers React, Redux, React Hooks, and more.",
+    image: "ReactUdemy.jpg",
+    
+
   }
   
 ];
