@@ -180,22 +180,26 @@ export const Card = (props) => {
               {description.substring(0, 90)}...
             </p>
             <div className="flex items-center -space-x-3">
-              {skills.map((skill) => (
-                <Image
-                  src={
-                    data_badge.filter(
-                      (badge) =>
-                        badge.name.toLowerCase() === skill.toLowerCase()
-                    )[0]["imageUrl"]
-                  }
-                  alt={skill}
-                  key={skill}
-                  width={40}
-                  height={40}
-                  objectFit="cover"
-                  className="relative inline-block !rounded-md border-2 border-white object-cover object-center hover:z-10"
-                />
-              ))}
+              {skills.map((skill) => {
+                const imageData = data_badge.filter(
+                  (badge) => badge.name.toLowerCase() === skill.toLowerCase()
+                );
+                if (imageData.length > 0) {
+                  return (
+                    <Image
+                      src={imageData[0]["imageUrl"]}
+                      alt={skill}
+                      key={skill}
+                      width={40}
+                      height={40}
+                      objectFit="cover"
+                      className="relative inline-block !rounded-md border-2 border-white object-cover object-center hover:z-10"
+                    />
+                  );
+                } else {
+                  return <></>;
+                }
+              })}
             </div>
           </div>
           <div className="flex items-center justify-between p-4">
@@ -298,22 +302,30 @@ export const Card = (props) => {
                   # Skills
                 </h3>
                 <div className="flex flex-wrap gap-2 mt-1 md:mt-3">
-                  {skills.map((skill) => (
-                    <Image
-                      src={
-                        data_badge.filter(
-                          (badge) =>
-                            badge.name.toLowerCase() === skill.toLowerCase()
-                        )[0]["imageUrl"]
-                      }
-                      alt={skill}
-                      key={skill}
-                      width={40}
-                      height={40}
-                      objectFit="contain"
-                      className="rounded-md"
-                    />
-                  ))}
+                  {skills.map((skill) => {
+                    const imageData = data_badge.filter(
+                      (badge) =>
+                        badge.name.toLowerCase() === skill.toLowerCase()
+                    );
+                    if (imageData.length > 0) {
+                      return (
+                        <Image
+                          src={
+                            imageData[0]["imageUrl"]
+                          }
+                          alt={skill}
+                          key={skill}
+                          width={40}
+                          height={40}
+                          objectFit="contain"
+                          className="rounded-md"
+                          key={skill}
+                        />
+                      );
+                    } else {
+                      return <></>;
+                    }
+                  })}
                 </div>
                 <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3">
                   # Tags

@@ -9,7 +9,7 @@ import GithubLogo from "../public/company/github.png";
 import LiveLogo from "../public/assets/live.png";
 import { data as data_badge } from "./data_pl";
 import { DownloadIcon } from "lucide-react";
-import {badgeColorGenerator} from "./utils/utils";
+import { badgeColorGenerator } from "./utils/utils";
 
 const Projects = () => {
   const [project, setProject] = useState(data);
@@ -18,7 +18,12 @@ const Projects = () => {
 
   return (
     <>
-      <div className="PL__container" data-aos="fade-up" data-aos-delay="100" id="projects">
+      <div
+        className="PL__container"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        id="projects"
+      >
         <h2 className="text-4xl font-bold mb-2 text-center">Projects</h2>
         <h2 className="text-2xl mb-2 text-center">
           See what i build about{" "}
@@ -157,22 +162,28 @@ export const Card = (props) => {
               {description.substring(0, 90)}...
             </p>
             <div className="flex items-center -space-x-3">
-              {skills.map((skill) => (
-                <Image
-                  src={
-                    data_badge.filter(
-                      (badge) =>
-                        badge.name.toLowerCase() === skill.toLowerCase()
-                    )[0]["imageUrl"]
-                  }
-                  alt={skill}
-                  key={skill}
-                  width={40}
-                  height={40}
-                  objectFit="cover"
-                  className="relative inline-block !rounded-md border-2 border-white object-cover object-center hover:z-10"
-                />
-              ))}
+              {skills.map((skill) => {
+                const imageData = data_badge.filter(
+                  (badge) => badge.name.toLowerCase() === skill.toLowerCase()
+                );
+                if (imageData.length > 0) {
+                  return (
+                    <Image
+                      src={
+                        imageData[0]["imageUrl"]
+                      }
+                      alt={skill}
+                      key={skill}
+                      width={40}
+                      height={40}
+                      objectFit="cover"
+                      className="relative inline-block !rounded-md border-2 border-white object-cover object-center hover:z-10"
+                    />
+                  );
+                }else{
+                  return <></>
+                }
+              })}
             </div>
           </div>
           <div className="flex items-center justify-between p-4">
@@ -243,8 +254,12 @@ export const Card = (props) => {
                 />
               </div>
               <div className="w-full md:w-1/2 px-0 md:px-16">
-                <h2 className="font-bold text-xl md:text-2xl text-[#002D74]">{name}</h2>
-                <p className="text-xs mt-2 md:mt-4 text-[#002D74]">{description}</p>
+                <h2 className="font-bold text-xl md:text-2xl text-[#002D74]">
+                  {name}
+                </h2>
+                <p className="text-xs mt-2 md:mt-4 text-[#002D74]">
+                  {description}
+                </p>
                 <div className="flex items-center justify-between p-2 md:p-4">
                   <a
                     href={linkedin}
@@ -274,28 +289,34 @@ export const Card = (props) => {
                       objectFit="contain"
                     />
                   </a>
-                  
-                  {
-                    link && <a
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center"
-                  >
-                    <Image
-                      src={LiveLogo}
-                      alt="linkedin"
-                      height={40}
-                      width={70}
-                      objectFit="contain"
-                    />
-                  </a>
-                  }
+
+                  {link && (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center"
+                    >
+                      <Image
+                        src={LiveLogo}
+                        alt="linkedin"
+                        height={40}
+                        width={70}
+                        objectFit="contain"
+                      />
+                    </a>
+                  )}
                 </div>
-                <h3 className="font-bold text-md md:text-lg text-[#002D74]"># Skills</h3>
+                <h3 className="font-bold text-md md:text-lg text-[#002D74]">
+                  # Skills
+                </h3>
                 <div className="flex flex-wrap gap-2 mt-3">
-                  {skills.map((skill) => (
-                    <Image
+                  {skills.map((skill) => {
+                    const imageData = data_badge.filter(
+                      (badge) => badge.name.toLowerCase() === skill.toLowerCase()
+                    );
+                    if(imageData.length > 0){
+                    return <Image
                       src={
                         data_badge.filter(
                           (badge) =>
@@ -309,16 +330,22 @@ export const Card = (props) => {
                       objectFit="contain"
                       className="rounded-md"
                     />
-                  ))}
+                    }
+                    else{
+                      return <></>
+                    }})}
                 </div>
                 <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3">
                   # Tags
                 </h3>
                 <div className="flex flex-wrap gap-2 mt-1">
                   {tags.map((tag) => (
-                    <span key={tag} className={`text-sm font-medium me-2 px-2.5 py-0.5 rounded ${badgeColorGenerator()}`}>
-                    {tag}
-                  </span>
+                    <span
+                      key={tag}
+                      className={`text-sm font-medium me-2 px-2.5 py-0.5 rounded ${badgeColorGenerator()}`}
+                    >
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
