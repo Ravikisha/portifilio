@@ -169,9 +169,7 @@ export const Card = (props) => {
                 if (imageData.length > 0) {
                   return (
                     <Image
-                      src={
-                        imageData[0]["imageUrl"]
-                      }
+                      src={imageData[0]["imageUrl"]}
                       alt={skill}
                       key={skill}
                       width={40}
@@ -180,8 +178,8 @@ export const Card = (props) => {
                       className="relative inline-block !rounded-md border-2 border-white object-cover object-center hover:z-10"
                     />
                   );
-                }else{
-                  return <></>
+                } else {
+                  return <></>;
                 }
               })}
             </div>
@@ -313,27 +311,25 @@ export const Card = (props) => {
                 <div className="flex flex-wrap gap-2 mt-3">
                   {skills.map((skill) => {
                     const imageData = data_badge.filter(
-                      (badge) => badge.name.toLowerCase() === skill.toLowerCase()
+                      (badge) =>
+                        badge.name.toLowerCase() === skill.toLowerCase()
                     );
-                    if(imageData.length > 0){
-                    return <Image
-                      src={
-                        data_badge.filter(
-                          (badge) =>
-                            badge.name.toLowerCase() === skill.toLowerCase()
-                        )[0]["imageUrl"]
-                      }
-                      alt={skill}
-                      key={skill}
-                      width={40}
-                      height={40}
-                      objectFit="contain"
-                      className="rounded-md"
-                    />
+                    if (imageData.length > 0) {
+                      return (
+                        <Image
+                          src={imageData[0]["imageUrl"]}
+                          alt={skill}
+                          key={skill}
+                          width={40}
+                          height={40}
+                          objectFit="contain"
+                          className="rounded-md"
+                        />
+                      );
+                    } else {
+                      return <></>;
                     }
-                    else{
-                      return <></>
-                    }})}
+                  })}
                 </div>
                 <h3 className="font-bold text-md md:text-lg text-[#002D74] mt-3">
                   # Tags

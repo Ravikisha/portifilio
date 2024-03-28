@@ -310,16 +310,13 @@ export const Card = (props) => {
                     if (imageData.length > 0) {
                       return (
                         <Image
-                          src={
-                            imageData[0]["imageUrl"]
-                          }
+                          src={imageData[0]["imageUrl"]}
                           alt={skill}
                           key={skill}
                           width={40}
                           height={40}
                           objectFit="contain"
                           className="rounded-md"
-                          key={skill}
                         />
                       );
                     } else {
