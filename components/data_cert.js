@@ -36,5 +36,16 @@ export const data = [
       "https://www.linkedin.com/posts/ravi-kishan-62ab51221_reactdevelopment-udemycertificate-maximilianschwarzmuller-activity-7170471600520052736-a53l?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["React", "Redux"],
-  },
+  },{
+    name: "React Basic",
+    organization: "hackerrank",
+    description:
+      "This certification is awarded to students who have completed the React Basic test on HackerRank. The test covers React, React Hooks, and more.",
+      image: "reactbasichackerrank.jpg",
+    link: "https://www.hackerrank.com/certificates/2c3102950f14",
+    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_reactcertified-codingjourney-webdevelopment-activity-7110679056995483648-_2Tu?utm_source=share&utm_medium=member_desktop",
+    tags: ["academic"],
+    skills: ["React"],
+
+  }
 ];
