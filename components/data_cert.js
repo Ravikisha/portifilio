@@ -56,5 +56,25 @@ export const data = [
     linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["Node Js", "Express.Js", "React", "Cloud"]
+  }, {
+    name: "Developing Applications with SQL, Databases, and Django",
+    organization: "ibm",
+    description:
+      "This certification is awarded to students who have completed the Developing Applications with SQL, Databases, and Django course on Coursera. The course covers SQL, Databases, Django, and more.",
+    image: "IBMFullStack1.jpg",
+    link: "https://www.coursera.org/account/accomplishments/certificate/GWTYK6XDUU3R",
+    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    tags: ["academic"],
+    skills: ["SQL", "Django", "Databases"]
+  }, {
+    name: "Full Stack Cloud Development Capstone Project",
+    organization: "ibm",
+    description:
+      "This certification is awarded to students who have completed the Full Stack Cloud Development Capstone Project course on Coursera. The course covers Cloud Development, React, Node.js, and more.",
+    image: "IBMFullStack2.jpg",
+    link: "https://www.coursera.org/account/accomplishments/certificate/S9YHKGZU7KR8",
+    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    tags: ["academic"],
+    skills: ["Cloud", "React", "Node Js"]
   }
 ];
