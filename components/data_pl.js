@@ -353,7 +353,7 @@ export const data = [
         ]
     },
     {
-        "name": "Kotlin Android",
+        "name": "Kotlin",
         "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
         "codelink": "https://www.google.com/search?q=Kotlin+android+development",
         "tags": [
