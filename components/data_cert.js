@@ -48,7 +48,7 @@ export const data = [
     skills: ["React"],
   }, {
     name: "IBM Full Stack Developer",
-    organization: "coursera",
+    organization: "ibm",
     description:
       "This certification is awarded to students who have completed the Full Stack Developer course on Coursera. The course covers HTML, CSS, JavaScript, Node.js, and more.",
     image: "IBMFullStackCoursera.jpg",
