@@ -36,45 +36,65 @@ export const data = [
       "https://www.linkedin.com/posts/ravi-kishan-62ab51221_reactdevelopment-udemycertificate-maximilianschwarzmuller-activity-7170471600520052736-a53l?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["React", "Redux"],
-  },{
+  },
+  {
     name: "React Basic",
     organization: "hackerrank",
     description:
       "This certification is awarded to students who have completed the React Basic test on HackerRank. The test covers React, React Hooks, and more.",
-      image: "reactbasichackerrank.jpg",
+    image: "reactbasichackerrank.jpg",
     link: "https://www.hackerrank.com/certificates/2c3102950f14",
-    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_reactcertified-codingjourney-webdevelopment-activity-7110679056995483648-_2Tu?utm_source=share&utm_medium=member_desktop",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_reactcertified-codingjourney-webdevelopment-activity-7110679056995483648-_2Tu?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["React"],
-  }, {
+  },
+  {
     name: "IBM Full Stack Developer",
     organization: "ibm",
     description:
       "This certification is awarded to students who have completed the Full Stack Developer course on Coursera. The course covers HTML, CSS, JavaScript, Node.js, and more.",
     image: "IBMFullStackCoursera.jpg",
     link: "https://www.coursera.org/account/accomplishments/specialization/88XYDYUS2WCA?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Ds12n",
-    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
-    skills: ["Node Js", "Express.Js", "React", "Cloud"]
-  }, {
+    skills: ["Node Js", "Express.Js", "React", "Cloud"],
+  },
+  {
     name: "Developing Applications with SQL, Databases, and Django",
     organization: "ibm",
     description:
       "This certification is awarded to students who have completed the Developing Applications with SQL, Databases, and Django course on Coursera. The course covers SQL, Databases, Django, and more.",
     image: "IBMFullStack1.jpg",
     link: "https://www.coursera.org/account/accomplishments/certificate/GWTYK6XDUU3R",
-    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
-    skills: ["SQL", "Django", "Databases"]
-  }, {
+    skills: ["SQL", "Django", "Databases"],
+  },
+  {
     name: "Full Stack Cloud Development Capstone Project",
     organization: "ibm",
     description:
       "This certification is awarded to students who have completed the Full Stack Cloud Development Capstone Project course on Coursera. The course covers Cloud Development, React, Node.js, and more.",
     image: "IBMFullStack2.jpg",
     link: "https://www.coursera.org/account/accomplishments/certificate/S9YHKGZU7KR8",
-    linkedin: "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
-    skills: ["Cloud", "React", "Node Js"]
+    skills: ["Cloud", "React", "Node Js"],
+  },
+  {
+    name: "Developing Back-End Applications with Node.js and Express",
+    organization: "ibm",
+    description:
+      "This certification is awarded to students who have completed the Developing Back-End Applications with Node.js and Express course on Coursera. The course covers Node.js, Express, and more.",
+    image: "IBMFullStack3.jpg",
+    link: "https://www.coursera.org/account/accomplishments/certificate/U2QA7MWXA933",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    tags: ["academic"],
+    skills: ["Node Js", "Express.Js"],
   }
 ];
