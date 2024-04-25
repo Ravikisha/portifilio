@@ -107,5 +107,29 @@ export const data = [
       "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
     tags: ["academic"],
     skills: ["Cloud Computing", "AWS", "Azure"],
+  },
+  {
+    name: "Full Stack Software Developer Assessment",
+    organization: "ibm",
+    description:
+      "This certification is awarded to students who have completed the Full Stack Software Developer Assessment on Coursera. The assessment covers Full Stack Development, Cloud Computing, and more.",
+    image: "IBMFullStack5.jpg",
+    link: "https://www.coursera.org/account/accomplishments/certificate/BZK9E82KJQH8",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    tags: ["academic"],
+    skills: ["Full Stack Development", "Cloud Computing"],
+  },
+  {
+    name: "Developing AI Applications with Python and Flask",
+    organization: "ibm",
+    description:
+      "This certification is awarded to students who have completed the Developing AI Applications with Python and Flask course on Coursera. The course covers AI, Python, Flask, and more.",
+    image: "IBMFullStack6.jpg",
+    link: "https://www.coursera.org/account/accomplishments/certificate/KXDVCSC5RSFW",
+    linkedin:
+      "https://www.linkedin.com/posts/ravi-kishan-62ab51221_ravi-kishan-ibm-full-stack-software-developer-activity-7108862064168726530-TSkW?utm_source=share&utm_medium=member_desktop",
+    tags: ["academic"],
+    skills: ["AI", "Python", "Flask"],
   }
 ];
